@@ -135,6 +135,8 @@ namespace Package.Editor
         {
             PathEvent pathEvent = new PathEvent(name, this);
             events.Add(name, pathEvent);
+            
+            UpdateChildList();
         }
 
         /// <summary>
@@ -154,6 +156,8 @@ namespace Package.Editor
         {
             PathDirectory directory = new PathDirectory(name, this);
             subDirectories.Add(name, directory);
+            
+            UpdateChildList();
         }
 
         /// <summary>
@@ -406,11 +410,8 @@ namespace Package.Editor
 
                     this.AddDirectory(directoryName);
                 }
-                children.Clear();
-                foreach (IPathElement child in this.GetChildren())
-                {
-                    children.Add(child);
-                }
+                
+                UpdateChildList();
                 reorderableList.DoLayoutList();
             };
             reorderableList.onRemoveCallback += list =>
@@ -430,6 +431,18 @@ namespace Package.Editor
                     children.Add(child);
                 }
             };
+        }
+
+        /// <summary>
+        /// Call this method to update the child list
+        /// </summary>
+        private void UpdateChildList()
+        {
+            children.Clear();
+            foreach (IPathElement child in this.GetChildren())
+            {
+                children.Add(child);
+            }
         }
 
         public float editorHeight
@@ -570,6 +583,9 @@ namespace Package.Editor
         private void OnEnable()
         {
             _root = new PathDirectory();
+            
+            ReadFromConfig();
+            
             rootChidren = _root.GetChildren();
             
             rootList = new ReorderableList(rootChidren, typeof(IPathElement), true, true, true, true);
@@ -662,6 +678,57 @@ namespace Package.Editor
                 if (GUILayout.Button("Current: Add Event"))
                 {
                     _addDirectory = true;
+                }
+            }
+            
+            EditorGUILayout.Space(10);
+
+            if (GUILayout.Button("Save"))
+            {
+                if (EditorUtility.DisplayDialog("Warning!",
+                    "This will override the old data in the config, are you sure to do that?", "Yes", "Cancel"))
+                {
+                    SaveAllPath();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Call this method to save all the path
+        /// </summary>
+        private void SaveAllPath()
+        {
+            GlobalEventConfig config = (GlobalEventConfig) serializedObject.targetObject;
+            config.eventNames = _root.GetAllEvents().ToList();
+        }
+
+        /// <summary>
+        /// Call this method to read from config
+        /// </summary>
+        private void ReadFromConfig()
+        {
+            GlobalEventConfig config = (GlobalEventConfig) serializedObject.targetObject;
+            
+            foreach (string path in config.eventNames)
+            {
+                PathDirectory workingDirectory = _root;
+                string[] pathArray = path.Split('/');
+                for (int i = 1; i < pathArray.Length; i++)
+                {
+                    // If go to the final path, add the event to the working directory
+                    if (i == pathArray.Length - 1)
+                    {
+                        workingDirectory.AddEvent(pathArray[i]);
+                        break;
+                    }
+                    // check if working directory has specific sub directory
+                    if (!workingDirectory.subDirectories.ContainsKey(pathArray[i]))
+                    {
+                        workingDirectory.AddDirectory(pathArray[i]);
+                    }
+
+                    // update the working directory(go into the new directory)
+                    workingDirectory = workingDirectory.subDirectories[pathArray[i]];
                 }
             }
         }
