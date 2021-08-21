@@ -43,6 +43,7 @@ namespace Package.Editor
                 else
                 {
                     _index = 0;
+                    property.stringValue = _options[_index];
                 }
             }
             

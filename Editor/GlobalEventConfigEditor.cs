@@ -68,9 +68,21 @@ namespace Package.Editor
         public Dictionary<string, PathEvent> events;
 
         /// <summary>
+        /// All the children in the current directory
+        /// </summary>
+        private List<IPathElement> children;
+
+        /// <summary>
+        /// The reorderable list
+        /// </summary>
+        private ReorderableList reorderableList;
+
+        /// <summary>
         /// The height of editor
         /// </summary>
         private float _editorHeight = 0;
+
+        private bool _addDirectory = false;
 
         /// <summary>
         /// The constructor of a root EventDirectory
@@ -80,8 +92,10 @@ namespace Package.Editor
             subDirectories = new Dictionary<string, PathDirectory>();
             events = new Dictionary<string, PathEvent>();
             this.name = "root";
-            this.path = "";
+            this.path = "root";
             parentPath = null;
+
+            OnEnable();
         }
 
         /// <summary>
@@ -97,6 +111,8 @@ namespace Package.Editor
             this.name = name;
             this.path = parentDirectory.path + "/" + name;
             this.parentPath = parentDirectory.path;
+            
+            OnEnable();
         }
 
         /// <summary>
@@ -274,8 +290,37 @@ namespace Package.Editor
         public void DrawPathElement(Rect rect, int index, bool active, bool focused)
         {
             _editorHeight = 0;
-            List<IPathElement> children = GetChildren();
-            ReorderableList reorderableList = new ReorderableList(children, typeof(IPathElement));
+            
+            reorderableList.DoList(rect);
+            _editorHeight += reorderableList.GetHeight();
+            
+            rect.y += reorderableList.GetHeight();
+            rect.height = 18;
+            
+            // Change the add mode
+            if (_addDirectory)
+            {
+                if (GUI.Button(rect, "Current: Add Directory"))
+                {
+                    _addDirectory = false;
+                }
+            }
+            else
+            {
+                if (GUI.Button(rect, "Current: Add Event"))
+                {
+                    _addDirectory = true;
+                }
+            }
+
+            _editorHeight += 18;
+        }
+
+        private void OnEnable()
+        {
+            children = GetChildren();
+            reorderableList = new ReorderableList(children, typeof(IPathElement));
+            // the callback to draw the header
             reorderableList.drawHeaderCallback += rect1 =>
             {
                 string newName = EditorGUI.TextField(rect1, name);
@@ -284,9 +329,68 @@ namespace Package.Editor
                     Rename(newName);
                 }
             };
-            
-            reorderableList.DoList(rect);
-            _editorHeight += reorderableList.GetHeight();
+            // the callback to draw each element
+            reorderableList.drawElementCallback += (rect, index, active, focused) =>
+            {
+                children[index].DrawPathElement(rect, index, active, focused);
+            };
+            // the callback to get the height of each element
+            reorderableList.elementHeightCallback += index =>
+            {
+                //Debug.Log(rootChidren[index].editorHeight);
+                return children[index].editorHeight;
+            };
+            // add a new event or directory
+            reorderableList.onAddCallback += list =>
+            {
+                if (!_addDirectory)
+                {
+                    int index = 0;
+                    string eventName = "NEW_EVENT_" + index.ToString();
+                    while (this.events.ContainsKey(eventName))
+                    {
+                        index++;
+                        eventName = "NEW_EVENT_" + index.ToString();
+                    }
+
+                    this.AddEvent(eventName);
+                }
+                else
+                {
+                    int index = 0;
+                    string directoryName = "NEW_DIRECTORY_" + index.ToString();
+                    while (this.subDirectories.ContainsKey(directoryName))
+                    {
+                        index++;
+                        directoryName = "NEW_DIRECTORY_" + index.ToString();
+                    }
+
+                    this.AddDirectory(directoryName);
+                }
+                children.Clear();
+                foreach (IPathElement child in this.GetChildren())
+                {
+                    children.Add(child);
+                }
+                reorderableList.DoLayoutList();
+            };
+            reorderableList.onRemoveCallback += list =>
+            {
+                IPathElement selected = children[list.index];
+                if (selected.isDirectory)
+                {
+                    ((PathDirectory)selected).parentDirectory.RemoveDirectory(((PathDirectory)selected).name);
+                }
+                else
+                {
+                    ((PathEvent)selected).parentDirectory.RemoveEvent(((PathEvent)selected).name);
+                }
+                children.Clear();
+                foreach (IPathElement child in this.GetChildren())
+                {
+                    children.Add(child);
+                }
+            };
         }
 
         public float editorHeight
@@ -417,7 +521,7 @@ namespace Package.Editor
         /// <summary>
         /// If the new element added is a directory
         /// </summary>
-        private bool _addDirectory;
+        private bool _addDirectory = false;
 
         private List<IPathElement> rootChidren;
         private ReorderableList rootList;
@@ -430,16 +534,20 @@ namespace Package.Editor
             rootChidren = _root.GetChildren();
             
             rootList = new ReorderableList(rootChidren, typeof(IPathElement), true, true, true, true);
+            // Draw the root's header as label root
             rootList.drawHeaderCallback += rect => { EditorGUI.LabelField(rect, "Root"); };
+            // the callback to draw each element
             rootList.drawElementCallback += (rect, index, active, focused) =>
             {
                 rootChidren[index].DrawPathElement(rect, index, active, focused);
             };
+            // the callback to get the height of each element
             rootList.elementHeightCallback += index =>
             {
                 //Debug.Log(rootChidren[index].editorHeight);
                 return rootChidren[index].editorHeight;
             };
+            // add a new event or event directory
             rootList.onAddCallback += list =>
             {
                 if (!_addDirectory)
@@ -475,10 +583,16 @@ namespace Package.Editor
             };
             rootList.onRemoveCallback += list =>
             {
+                if (!EditorUtility.DisplayDialog("Warning!", "You are removing a directory, are you sure to do that?",
+                    "Yes", "Cancel"))
+                {
+                    return;
+                }
+                
                 IPathElement selected = rootChidren[list.index];
                 if (selected.isDirectory)
                 {
-                    
+                    ((PathDirectory)selected).parentDirectory.RemoveDirectory(((PathDirectory)selected).name);
                 }
                 else
                 {

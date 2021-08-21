@@ -37,7 +37,7 @@ public class EventDirectoryTest
         _root.AddEvent("EVENT_ROOT");
         
         // check if the event's path is "/EVENT_ROOT"
-        Assert.AreEqual("/EVENT_ROOT", _root.events["EVENT_ROOT"].path);
+        Assert.AreEqual("root/EVENT_ROOT", _root.events["EVENT_ROOT"].path);
     }
 
     /// <summary>
@@ -53,7 +53,7 @@ public class EventDirectoryTest
         _root.AddDirectory("DIRECTORY_ROOT");
         
         // check if the event's path is "/DIRECTORY_ROOT"
-        Assert.AreEqual("/DIRECTORY_ROOT", _root.subDirectories["DIRECTORY_ROOT"].path);
+        Assert.AreEqual("root/DIRECTORY_ROOT", _root.subDirectories["DIRECTORY_ROOT"].path);
     }
 
     /// <summary>
@@ -110,7 +110,7 @@ public class EventDirectoryTest
         _root.subDirectories["DIRECTORY_ROOT"].AddEvent("EVENT_SUB");
         
         // check if the event's path is "/DIRECTORY_ROOT"
-        Assert.AreEqual("/DIRECTORY_ROOT/EVENT_SUB", _root.subDirectories["DIRECTORY_ROOT"].events["EVENT_SUB"].path);
+        Assert.AreEqual("root/DIRECTORY_ROOT/EVENT_SUB", _root.subDirectories["DIRECTORY_ROOT"].events["EVENT_SUB"].path);
     }
 
     /// <summary>
@@ -129,7 +129,7 @@ public class EventDirectoryTest
         _root.subDirectories["DIRECTORY_ROOT"].AddDirectory("DIRECTORY_SUB");
         
         // check if the event's path is "/DIRECTORY_ROOT"
-        Assert.AreEqual("/DIRECTORY_ROOT/DIRECTORY_SUB",
+        Assert.AreEqual("root/DIRECTORY_ROOT/DIRECTORY_SUB",
             _root.subDirectories["DIRECTORY_ROOT"].subDirectories["DIRECTORY_SUB"].path);
     }
 
@@ -162,8 +162,8 @@ public class EventDirectoryTest
         string[] res = _root.GetAllEvents();
         
         Assert.AreEqual(2, res.Length);
-        Assert.Contains("/EVENT_ROOT_1", res);
-        Assert.Contains("/EVENT_ROOT_2", res);
+        Assert.Contains("root/EVENT_ROOT_1", res);
+        Assert.Contains("root/EVENT_ROOT_2", res);
     }
 
     /// <summary>
@@ -202,8 +202,8 @@ public class EventDirectoryTest
         string[] res = _root.GetAllEvents();
         
         Assert.AreEqual(2, res.Length);
-        Assert.Contains("/DIRECTORY_ROOT/EVENT_SUB_1", res);
-        Assert.Contains("/DIRECTORY_ROOT/EVENT_SUB_2", res);
+        Assert.Contains("root/DIRECTORY_ROOT/EVENT_SUB_1", res);
+        Assert.Contains("root/DIRECTORY_ROOT/EVENT_SUB_2", res);
     }
 
     /// <summary>
@@ -219,13 +219,13 @@ public class EventDirectoryTest
         _root.AddEvent("EVENT_ROOT");
         
         // check if the event's path is "/EVENT_ROOT"
-        Assert.AreEqual("/EVENT_ROOT", _root.events["EVENT_ROOT"].path);
+        Assert.AreEqual("root/EVENT_ROOT", _root.events["EVENT_ROOT"].path);
         
         // rename the event
         _root.events["EVENT_ROOT"].Rename("EVENT_ROOT_NEW");
         
         // check if the event's path is "/EVENT_ROOT"
-        Assert.AreEqual("/EVENT_ROOT_NEW", _root.events["EVENT_ROOT_NEW"].path);
+        Assert.AreEqual("root/EVENT_ROOT_NEW", _root.events["EVENT_ROOT_NEW"].path);
     }
 
     /// <summary>
@@ -246,7 +246,7 @@ public class EventDirectoryTest
         string[] res = _root.GetAllEvents();
         
         Assert.AreEqual(1, res.Length);
-        Assert.Contains("/DIRECTORY_ROOT/EVENT_SUB_1", res);
+        Assert.Contains("root/DIRECTORY_ROOT/EVENT_SUB_1", res);
         
         // Rename the DIRECTORY_ROOT
         _root.subDirectories["DIRECTORY_ROOT"].Rename("DIRECTORY_ROOT_NEW");
@@ -255,6 +255,6 @@ public class EventDirectoryTest
         res = _root.GetAllEvents();
         
         Assert.AreEqual(1, res.Length);
-        Assert.Contains("/DIRECTORY_ROOT_NEW/EVENT_SUB_1", res);
+        Assert.Contains("root/DIRECTORY_ROOT_NEW/EVENT_SUB_1", res);
     }
 }

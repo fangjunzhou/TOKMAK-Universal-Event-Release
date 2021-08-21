@@ -35,7 +35,7 @@ public class GlobalEventTest
     public void GlobalEventManagerListenTest()
     {
         // Register a new global event
-        GlobalEventManager.Instance.RegisterEvent("/TEST_EVENT_1", data =>
+        GlobalEventManager.Instance.RegisterEvent("root/TEST_EVENT_1", data =>
         {
             
         });
@@ -49,7 +49,7 @@ public class GlobalEventTest
     public void GlobalEventManagerInvokeTest()
     {
         // Invoke a new global event
-        GlobalEventManager.Instance.InvokeEvent("/TEST_EVENT_1", new GlobalEventData());
+        GlobalEventManager.Instance.InvokeEvent("root/TEST_EVENT_1", new GlobalEventData());
         Assert.Pass("Invoke event listener success.");
     }
 
@@ -62,7 +62,7 @@ public class GlobalEventTest
         // the test bool value
         bool testBool = false;
         // Register the event to change the bool value
-        GlobalEventManager.Instance.RegisterEvent("/TEST_EVENT_1", data =>
+        GlobalEventManager.Instance.RegisterEvent("root/TEST_EVENT_1", data =>
         {
             testBool = ((GlobalEventData<bool>) data).data1;
         });
@@ -70,7 +70,7 @@ public class GlobalEventTest
         // Check if the testBool is still false before the event
         Assert.IsFalse(testBool);
         // Invoke the event, pass in a bool value: true
-        GlobalEventManager.Instance.InvokeEvent("/TEST_EVENT_1", new GlobalEventData<bool>()
+        GlobalEventManager.Instance.InvokeEvent("root/TEST_EVENT_1", new GlobalEventData<bool>()
         {
             data1 = true
         });
@@ -87,7 +87,7 @@ public class GlobalEventTest
         // the test string value
         string testString = "false";
         // Register the event to change the string value
-        GlobalEventManager.Instance.RegisterEvent("/TEST_EVENT_1", data =>
+        GlobalEventManager.Instance.RegisterEvent("root/TEST_EVENT_1", data =>
         {
             testString = ((GlobalEventData<string>) data).data1;
         });
@@ -95,7 +95,7 @@ public class GlobalEventTest
         // Check if the testString is still false before the event
         Assert.AreEqual(testString, "false");
         // Invoke the event, pass in a string value: true
-        GlobalEventManager.Instance.InvokeEvent("/TEST_EVENT_1", new GlobalEventData<string>()
+        GlobalEventManager.Instance.InvokeEvent("root/TEST_EVENT_1", new GlobalEventData<string>()
         {
             data1 = "true"
         });
@@ -113,7 +113,7 @@ public class GlobalEventTest
         bool testBool = false;
         string testString = "false";
         // Register the event to change the bool and string value
-        GlobalEventManager.Instance.RegisterEvent("/TEST_EVENT_1", data =>
+        GlobalEventManager.Instance.RegisterEvent("root/TEST_EVENT_1", data =>
         {
             testBool = ((GlobalEventData<bool, string>) data).data1;
             testString = ((GlobalEventData<bool, string>) data).data2;
@@ -123,7 +123,7 @@ public class GlobalEventTest
         Assert.IsFalse(testBool);
         Assert.AreEqual("false", testString);
         // Invoke the event, pass in a bool value and a string value: true
-        GlobalEventManager.Instance.InvokeEvent("/TEST_EVENT_1", new GlobalEventData<bool, string>()
+        GlobalEventManager.Instance.InvokeEvent("root/TEST_EVENT_1", new GlobalEventData<bool, string>()
         {
             data1 = true,
             data2 = "true"
@@ -143,7 +143,7 @@ public class GlobalEventTest
         bool testBool = false;
         string testString = "false";
         // Register the event to change the bool value
-        GlobalEventManager.Instance.RegisterEvent("/TEST_EVENT_1", data =>
+        GlobalEventManager.Instance.RegisterEvent("root/TEST_EVENT_1", data =>
         {
             // Test if the System can correctly throw the exception when listening to the event
             try
@@ -163,7 +163,7 @@ public class GlobalEventTest
         Assert.AreEqual("false", testString);
         
         // Invoke the event, pass in a bool value: true
-        GlobalEventManager.Instance.InvokeEvent("/TEST_EVENT_1", new GlobalEventData<bool>()
+        GlobalEventManager.Instance.InvokeEvent("root/TEST_EVENT_1", new GlobalEventData<bool>()
         {
             data1 = true
         });
