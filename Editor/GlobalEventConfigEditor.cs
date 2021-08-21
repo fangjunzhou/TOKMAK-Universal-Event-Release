@@ -67,6 +67,8 @@ namespace Package.Editor
         /// </summary>
         public Dictionary<string, PathEvent> events;
 
+        #region Editor Variables
+        
         /// <summary>
         /// All the children in the current directory
         /// </summary>
@@ -82,7 +84,17 @@ namespace Package.Editor
         /// </summary>
         private float _editorHeight = 0;
 
+        /// <summary>
+        /// if the current IPathElement is a directory 
+        /// </summary>
         private bool _addDirectory = false;
+
+        /// <summary>
+        /// If the directory is expanded
+        /// </summary>
+        private bool _expand = false;
+
+        #endregion
 
         /// <summary>
         /// The constructor of a root EventDirectory
@@ -290,30 +302,57 @@ namespace Package.Editor
         public void DrawPathElement(Rect rect, int index, bool active, bool focused)
         {
             _editorHeight = 0;
-            
-            reorderableList.DoList(rect);
-            _editorHeight += reorderableList.GetHeight();
-            
-            rect.y += reorderableList.GetHeight();
-            rect.height = 18;
-            
-            // Change the add mode
-            if (_addDirectory)
+
+            if (_expand)
             {
-                if (GUI.Button(rect, "Current: Add Directory"))
+                reorderableList.DoList(rect);
+                
+                _editorHeight += reorderableList.GetHeight();
+                rect.y += reorderableList.GetHeight();
+                rect.height = 18;
+            
+                // Change the add mode
+                if (_addDirectory)
                 {
-                    _addDirectory = false;
+                    if (GUI.Button(rect, "Current: Add Directory"))
+                    {
+                        _addDirectory = false;
+                    }
                 }
+                else
+                {
+                    if (GUI.Button(rect, "Current: Add Event"))
+                    {
+                        _addDirectory = true;
+                    }
+                }
+
+                _editorHeight += 18;
+                rect.y += 18;
+                rect.height = 18;
+                
+                if (GUI.Button(rect, "Fold↑"))
+                {
+                    _expand = false;
+                    DrawPathElement(rect, index, active, focused);
+                }
+                _editorHeight += 18;
             }
             else
             {
-                if (GUI.Button(rect, "Current: Add Event"))
-                {
-                    _addDirectory = true;
-                }
-            }
+                rect.height = 18;
+                EditorGUI.LabelField(rect, name, EditorStyles.boldLabel);
+                _editorHeight += 18;
+                rect.y += 18;
+                rect.height = 18;
 
-            _editorHeight += 18;
+                if (GUI.Button(rect, "Expand↓"))
+                {
+                    _expand = true;
+                    DrawPathElement(rect, index, active, focused);
+                }
+                _editorHeight += 18;
+            }
         }
 
         private void OnEnable()
