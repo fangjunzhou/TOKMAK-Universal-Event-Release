@@ -22,6 +22,11 @@ namespace Package.Editor
     public class PathDirectory : IPathElement
     {
         /// <summary>
+        /// The parent directory
+        /// </summary>
+        public PathDirectory parentDirectory;
+        
+        /// <summary>
         /// The directory name
         /// </summary>
         public string name;
@@ -63,13 +68,14 @@ namespace Package.Editor
         /// </summary>
         /// <param name="name">the name of current directory</param>
         /// <param name="parentPath">the path of its parent directory</param>
-        public PathDirectory(string name, string parentPath)
+        public PathDirectory(string name, PathDirectory parentDirectory)
         {
+            this.parentDirectory = parentDirectory;
             subDirectories = new Dictionary<string, PathDirectory>();
             events = new Dictionary<string, PathEvent>();
             this.name = name;
-            this.path = parentPath + "/" + name;
-            this.parentPath = parentPath;
+            this.path = parentDirectory.path + "/" + name;
+            this.parentPath = parentDirectory.path;
         }
 
         /// <summary>
@@ -78,7 +84,7 @@ namespace Package.Editor
         /// <param name="name">the name of the event</param>
         public void AddEvent(string name)
         {
-            PathEvent pathEvent = new PathEvent(name, path);
+            PathEvent pathEvent = new PathEvent(name, this);
             events.Add(name, pathEvent);
         }
 
@@ -97,7 +103,7 @@ namespace Package.Editor
         /// <param name="name">the name of the directory</param>
         public void AddDirectory(string name)
         {
-            PathDirectory directory = new PathDirectory(name, path);
+            PathDirectory directory = new PathDirectory(name, this);
             subDirectories.Add(name, directory);
         }
 
@@ -116,9 +122,59 @@ namespace Package.Editor
         /// <param name="newName"></param>
         public void Rename(string newName)
         {
+            // Cannot rename root directory
+            if (parentPath == null)
+            {
+                throw new InvalidOperationException("Cannot rename root directory.");
+            }
+            
+            // remove the old key-value pair in the parent directory
+            parentDirectory.subDirectories.Remove(this.name);
+            
             // Update the current name and path
             this.name = newName;
             this.path = parentPath + "/" + name;
+            
+            // change the key in parent directory
+            parentDirectory.subDirectories.Add(this.name, this);
+            
+            // Update the parent path of all the events
+            foreach (PathEvent pathEvent in events.Values)
+            {
+                pathEvent.UpdateParentPath(this.path);
+            }
+            // Update the parent path of all the sub directories
+            foreach (PathDirectory directory in subDirectories.Values)
+            {
+                directory.UpdateParentPath(this.path);
+            }
+        }
+
+        /// <summary>
+        /// Update the parent path of current event
+        /// </summary>
+        /// <param name="newParentPath">the new parent path</param>
+        public void UpdateParentPath(string newParentPath)
+        {
+            // Cannot update parent path for root directory
+            if (parentPath == null)
+            {
+                throw new InvalidOperationException("Cannot update parent path root directory.");
+            }
+            
+            this.parentPath = newParentPath;
+            this.path = parentPath + "/" + name;
+            
+            // Update the parent path of all the events
+            foreach (PathEvent pathEvent in events.Values)
+            {
+                pathEvent.UpdateParentPath(this.path);
+            }
+            // Update the parent path of all the sub directories
+            foreach (PathDirectory directory in subDirectories.Values)
+            {
+                directory.UpdateParentPath(this.path);
+            }
         }
 
         /// <summary>
@@ -194,6 +250,10 @@ namespace Package.Editor
     public class PathEvent
     {
         /// <summary>
+        /// The parent directory
+        /// </summary>
+        public PathDirectory parentDirectory;
+        /// <summary>
         /// The real name of the event
         /// </summary>
         public string name;
@@ -211,11 +271,12 @@ namespace Package.Editor
         /// </summary>
         /// <param name="name">the name of the event</param>
         /// <param name="parentPath">the path of it's parent directory</param>
-        public PathEvent(string name, string parentPath)
+        public PathEvent(string name, PathDirectory parentDirectory)
         {
+            this.parentDirectory = parentDirectory;
             this.name = name;
-            this.path = parentPath + "/" + name;
-            this.parentPath = parentPath;
+            this.path = parentDirectory.path + "/" + name;
+            this.parentPath = parentDirectory.path;
         }
 
         /// <summary>
@@ -224,8 +285,14 @@ namespace Package.Editor
         /// <param name="newName">the new name of the event</param>
         public void Rename(string newName)
         {
+            // remove the old key-value pair in the parent directory
+            parentDirectory.events.Remove(this.name);
+            
             this.name = newName;
             this.path = parentPath + "/" + name;
+            
+            // change the key in parent directory
+            parentDirectory.events.Add(this.name, this);
         }
 
         /// <summary>

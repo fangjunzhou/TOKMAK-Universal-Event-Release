@@ -205,4 +205,56 @@ public class EventDirectoryTest
         Assert.Contains("/DIRECTORY_ROOT/EVENT_SUB_1", res);
         Assert.Contains("/DIRECTORY_ROOT/EVENT_SUB_2", res);
     }
+
+    /// <summary>
+    /// Rename the event in root directory
+    /// </summary>
+    [Test]
+    public void RootDirectoryEventRenameTest()
+    {
+        // create a root directory
+        _root = new PathDirectory();
+        
+        // add an event to the root directory
+        _root.AddEvent("EVENT_ROOT");
+        
+        // check if the event's path is "/EVENT_ROOT"
+        Assert.AreEqual("/EVENT_ROOT", _root.events["EVENT_ROOT"].path);
+        
+        // rename the event
+        _root.events["EVENT_ROOT"].Rename("EVENT_ROOT_NEW");
+        
+        // check if the event's path is "/EVENT_ROOT"
+        Assert.AreEqual("/EVENT_ROOT_NEW", _root.events["EVENT_ROOT_NEW"].path);
+    }
+
+    /// <summary>
+    /// Rename the directory in root directory
+    /// </summary>
+    [Test]
+    public void RootDirectoryDirectoryRenameTest()
+    {
+        // create a root directory
+        _root = new PathDirectory();
+        
+        // add an new directory to the root directory
+        _root.AddDirectory("DIRECTORY_ROOT");
+        
+        // add 2 events to the sub directory
+        _root.subDirectories["DIRECTORY_ROOT"].AddEvent("EVENT_SUB_1");
+        
+        string[] res = _root.GetAllEvents();
+        
+        Assert.AreEqual(1, res.Length);
+        Assert.Contains("/DIRECTORY_ROOT/EVENT_SUB_1", res);
+        
+        // Rename the DIRECTORY_ROOT
+        _root.subDirectories["DIRECTORY_ROOT"].Rename("DIRECTORY_ROOT_NEW");
+        
+        // check if the event's path changed
+        res = _root.GetAllEvents();
+        
+        Assert.AreEqual(1, res.Length);
+        Assert.Contains("/DIRECTORY_ROOT_NEW/EVENT_SUB_1", res);
+    }
 }
