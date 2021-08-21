@@ -4,6 +4,7 @@ using System.Linq;
 using FinTOKMAK.GlobalEventSystem.Runtime;
 using UnityEditor;
 using UnityEditorInternal;
+using UnityEngine;
 
 namespace Package.Editor
 {
@@ -12,8 +13,23 @@ namespace Package.Editor
     /// </summary>
     public interface IPathElement
     {
-        string displayName { get; set; }
-        IPathElement[] containElements();
+        bool isDirectory { get; }
+        string displayName { get; }
+        List<IPathElement> GetChildren();
+
+        /// <summary>
+        /// Call this method to draw the UI of the PathElement
+        /// </summary>
+        /// <param name="rect">the rect transform of the element</param>
+        /// <param name="index">the index to draw</param>
+        /// <param name="active">is the element active</param>
+        /// <param name="focused">is the element focused</param>
+        void DrawPathElement(Rect rect, int index, bool active, bool focused);
+
+        /// <summary>
+        /// Get the height of editor element
+        /// </summary>
+        float editorHeight { get; }
     }
     
     /// <summary>
@@ -50,6 +66,11 @@ namespace Package.Editor
         /// All the events in current directory
         /// </summary>
         public Dictionary<string, PathEvent> events;
+
+        /// <summary>
+        /// The height of editor
+        /// </summary>
+        private float _editorHeight = 0;
 
         /// <summary>
         /// The constructor of a root EventDirectory
@@ -226,28 +247,61 @@ namespace Package.Editor
             return res;
         }
 
+        public bool isDirectory
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         public string displayName
         {
             get
             {
                 return name;
             }
-            set
-            {
-                name = value;
-            }
         }
 
-        public IPathElement[] containElements()
+        public List<IPathElement> GetChildren()
         {
-            throw new NotImplementedException();
+            IPathElement[] directories = subDirectories.Values.ToArray();
+            IPathElement[] events = this.events.Values.ToArray();
+            
+            return MergeArray(directories, events).ToList();
+        }
+
+        public void DrawPathElement(Rect rect, int index, bool active, bool focused)
+        {
+            _editorHeight = 0;
+            List<IPathElement> children = GetChildren();
+            ReorderableList reorderableList = new ReorderableList(children, typeof(IPathElement));
+            reorderableList.drawHeaderCallback += rect1 =>
+            {
+                string newName = EditorGUI.TextField(rect1, name);
+                if (newName != name)
+                {
+                    Rename(newName);
+                }
+            };
+            
+            reorderableList.DoList(rect);
+            _editorHeight += reorderableList.GetHeight();
+        }
+
+        public float editorHeight
+        {
+            get
+            {
+                return _editorHeight;
+            }
         }
     }
 
     /// <summary>
     /// The event with path info using in the directory
     /// </summary>
-    public class PathEvent
+    public class PathEvent : IPathElement
     {
         /// <summary>
         /// The parent directory
@@ -265,6 +319,11 @@ namespace Package.Editor
         /// The path of its parent directory
         /// </summary>
         public string parentPath;
+
+        /// <summary>
+        /// The editor height
+        /// </summary>
+        private float _editorHeight = 0;
 
         /// <summary>
         /// The constructor of PathEvent
@@ -304,6 +363,48 @@ namespace Package.Editor
             this.parentPath = newParentPath;
             this.path = parentPath + "/" + name;
         }
+
+        public bool isDirectory
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public string displayName
+        {
+            get
+            {
+                return name;
+            }
+        }
+
+        public List<IPathElement> GetChildren()
+        {
+            return null;
+        }
+
+        public void DrawPathElement(Rect rect, int index, bool active, bool focused)
+        {
+            _editorHeight = 0;
+            rect.height = 18;
+            string newName = EditorGUI.TextField(rect, displayName);
+            if (newName != name)
+            {
+                Rename(newName);
+            }
+
+            _editorHeight += rect.height;
+        }
+
+        public float editorHeight
+        {
+            get
+            {
+                return _editorHeight;
+            }
+        }
     }
     
     [CustomEditor(typeof(GlobalEventConfig))]
@@ -313,16 +414,103 @@ namespace Package.Editor
 
         private PathDirectory _root;
 
+        /// <summary>
+        /// If the new element added is a directory
+        /// </summary>
+        private bool _addDirectory;
+
+        private List<IPathElement> rootChidren;
+        private ReorderableList rootList;
+
         #endregion
 
         private void OnEnable()
         {
             _root = new PathDirectory();
+            rootChidren = _root.GetChildren();
+            
+            rootList = new ReorderableList(rootChidren, typeof(IPathElement), true, true, true, true);
+            rootList.drawHeaderCallback += rect => { EditorGUI.LabelField(rect, "Root"); };
+            rootList.drawElementCallback += (rect, index, active, focused) =>
+            {
+                rootChidren[index].DrawPathElement(rect, index, active, focused);
+            };
+            rootList.elementHeightCallback += index =>
+            {
+                //Debug.Log(rootChidren[index].editorHeight);
+                return rootChidren[index].editorHeight;
+            };
+            rootList.onAddCallback += list =>
+            {
+                if (!_addDirectory)
+                {
+                    int index = 0;
+                    string eventName = "NEW_EVENT_" + index.ToString();
+                    while (_root.events.ContainsKey(eventName))
+                    {
+                        index++;
+                        eventName = "NEW_EVENT_" + index.ToString();
+                    }
+
+                    _root.AddEvent(eventName);
+                }
+                else
+                {
+                    int index = 0;
+                    string directoryName = "NEW_DIRECTORY_" + index.ToString();
+                    while (_root.subDirectories.ContainsKey(directoryName))
+                    {
+                        index++;
+                        directoryName = "NEW_DIRECTORY_" + index.ToString();
+                    }
+
+                    _root.AddDirectory(directoryName);
+                }
+                rootChidren.Clear();
+                foreach (IPathElement child in _root.GetChildren())
+                {
+                    rootChidren.Add(child);
+                }
+                rootList.DoLayoutList();
+            };
+            rootList.onRemoveCallback += list =>
+            {
+                IPathElement selected = rootChidren[list.index];
+                if (selected.isDirectory)
+                {
+                    
+                }
+                else
+                {
+                    ((PathEvent)selected).parentDirectory.RemoveEvent(((PathEvent)selected).name);
+                }
+                rootChidren.Clear();
+                foreach (IPathElement child in _root.GetChildren())
+                {
+                    rootChidren.Add(child);
+                }
+            };
         }
 
         public override void OnInspectorGUI()
         {
-            
+            rootList.DoLayoutList();
+
+            // Change the add mode
+            if (_addDirectory)
+            {
+                if (GUILayout.Button("Current: Add Directory"))
+                {
+                    _addDirectory = false;
+                }
+            }
+            else
+            {
+                if (GUILayout.Button("Current: Add Event"))
+                {
+                    _addDirectory = true;
+                }
+            }
         }
     }
 }
