@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.1] - 2021-06-29
 ### Added
+- Initialize repository
+- Finish implement basic invoke and listen function
 
-[Unreleased]: https://github.com/Fangjun-Zhou/Unity-UI-Stack-System
-[0.0.1]: https://github.com/Fangjun-Zhou/Unity-UI-Stack-System/releases/tag/uistacksystem-0.0.1
+[Unreleased]: https://github.com/Fangjun-Zhou/Unity-Global-Event-System
+[0.0.1]: https://github.com/Fangjun-Zhou/Unity-Global-Event-System/releases/tag/v0.0.1
