@@ -52,6 +52,11 @@ namespace FinTOKMAK.GlobalEventSystem.Runtime
 
         private void Awake()
         {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+            }
+            DontDestroyOnLoad(this);
             _config =  Settings<GlobalEventSettings>.instance.globalEventConfig;;
             
             Instance = this;
