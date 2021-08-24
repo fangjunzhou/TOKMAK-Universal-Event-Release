@@ -100,6 +100,16 @@ namespace FinTOKMAK.GlobalEventSystem.Runtime
             _eventTable[eventName] += registerEvent;
         }
 
+        /// <summary>
+        /// Unregister a method from the event
+        /// </summary>
+        /// <param name="eventName">the target event name</param>
+        /// <param name="registerEvent">the register method or logic</param>
+        public void UnRegisterEvent(string eventName, Action<IGlobalEventData> registerEvent)
+        {
+            _eventTable[eventName] -= registerEvent;
+        }
+
         #endregion
     }
 }
