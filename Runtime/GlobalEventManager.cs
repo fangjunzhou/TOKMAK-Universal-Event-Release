@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Hextant;
 using NaughtyAttributes;
-using Package.Editor;
 using UnityEngine;
 
 namespace FinTOKMAK.GlobalEventSystem.Runtime
@@ -57,7 +56,7 @@ namespace FinTOKMAK.GlobalEventSystem.Runtime
                 Destroy(gameObject);
             }
             DontDestroyOnLoad(this);
-            _config =  Settings<GlobalEventSettings>.instance.globalEventConfig;;
+            _config =  GlobalEventSettings.instance.globalEventConfig;
             
             Instance = this;
             

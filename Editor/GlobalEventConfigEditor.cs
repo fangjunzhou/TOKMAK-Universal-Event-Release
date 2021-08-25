@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FinTOKMAK.GlobalEventSystem.Runtime;
-using Hextant;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace Package.Editor
+namespace FinTOKMAK.GlobalEventSystem.Editor
 {
     /// <summary>
     /// The interface for PathDirectory and PathEvent
