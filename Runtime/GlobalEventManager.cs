@@ -54,6 +54,7 @@ namespace FinTOKMAK.GlobalEventSystem.Runtime
             if (Instance != null)
             {
                 Destroy(gameObject);
+                return;
             }
             DontDestroyOnLoad(this);
             _config =  GlobalEventSettings.instance.globalEventConfig;
