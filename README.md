@@ -1,4 +1,6 @@
-# Global Event System
+# TOKMAK Global Event
+
+This is a global event system for Unity that is easy to use, easy to configure, and really flexible.
 
 # Prerequisite
 
