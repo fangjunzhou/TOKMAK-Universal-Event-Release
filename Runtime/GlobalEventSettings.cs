@@ -1,18 +1,20 @@
-using FinTOKMAK.GlobalEventSystem.Runtime;
 using Hextant;
+#if UNITY_EDITOR
 using Hextant.Editor;
 using UnityEditor;
-using UnityEngine;
+#endif
 
-namespace Package.Editor
+namespace FinTOKMAK.GlobalEventSystem.Runtime
 {
-    [Settings( SettingsUsage.EditorProject, "FinTOKMAK Global Event" )]
+    [Settings( SettingsUsage.RuntimeProject, "FinTOKMAK Global Event" )]
     public sealed class GlobalEventSettings : Settings<GlobalEventSettings>
     {
         public GlobalEventConfig globalEventConfig;
         
+#if UNITY_EDITOR
         [SettingsProvider]
         static SettingsProvider GetSettingsProvider() =>
             instance.GetSettingsProvider();
+#endif
     }
 }

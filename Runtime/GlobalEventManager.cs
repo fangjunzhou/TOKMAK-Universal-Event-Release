@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Hextant;
 using NaughtyAttributes;
-using Package.Editor;
 using UnityEngine;
 
 namespace FinTOKMAK.GlobalEventSystem.Runtime
@@ -52,7 +51,13 @@ namespace FinTOKMAK.GlobalEventSystem.Runtime
 
         private void Awake()
         {
-            _config =  Settings<GlobalEventSettings>.instance.globalEventConfig;;
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            DontDestroyOnLoad(this);
+            _config =  GlobalEventSettings.instance.globalEventConfig;
             
             Instance = this;
             
@@ -98,6 +103,16 @@ namespace FinTOKMAK.GlobalEventSystem.Runtime
         public void RegisterEvent(string eventName, Action<IGlobalEventData> registerEvent)
         {
             _eventTable[eventName] += registerEvent;
+        }
+
+        /// <summary>
+        /// Unregister a method from the event
+        /// </summary>
+        /// <param name="eventName">the target event name</param>
+        /// <param name="registerEvent">the register method or logic</param>
+        public void UnRegisterEvent(string eventName, Action<IGlobalEventData> registerEvent)
+        {
+            _eventTable[eventName] -= registerEvent;
         }
 
         #endregion

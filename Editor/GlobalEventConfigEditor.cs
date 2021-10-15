@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace Package.Editor
+namespace FinTOKMAK.GlobalEventSystem.Editor
 {
     /// <summary>
     /// The interface for PathDirectory and PathEvent
@@ -638,15 +638,14 @@ namespace Package.Editor
             };
             rootList.onRemoveCallback += list =>
             {
-                if (!EditorUtility.DisplayDialog("Warning!", "You are removing a directory, are you sure to do that?",
-                    "Yes", "Cancel"))
-                {
-                    return;
-                }
-                
                 IPathElement selected = rootChidren[list.index];
                 if (selected.isDirectory)
                 {
+                    if (!EditorUtility.DisplayDialog("Warning!", "You are removing a directory, are you sure to do that?",
+                        "Yes", "Cancel"))
+                    {
+                        return;
+                    }
                     ((PathDirectory)selected).parentDirectory.RemoveDirectory(((PathDirectory)selected).name);
                 }
                 else
@@ -700,6 +699,7 @@ namespace Package.Editor
         {
             GlobalEventConfig config = (GlobalEventConfig) serializedObject.targetObject;
             config.eventNames = _root.GetAllEvents().ToList();
+            EditorUtility.SetDirty(config);
         }
 
         /// <summary>
@@ -708,6 +708,11 @@ namespace Package.Editor
         private void ReadFromConfig()
         {
             GlobalEventConfig config = (GlobalEventConfig) serializedObject.targetObject;
+
+            if (config.eventNames == null)
+            {
+                config.eventNames = new List<string>();
+            }
             
             foreach (string path in config.eventNames)
             {

@@ -1,5 +1,5 @@
+using FinTOKMAK.GlobalEventSystem.Editor;
 using NUnit.Framework;
-using Package.Editor;
 
 public class EventDirectoryTest
 {

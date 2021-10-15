@@ -4,7 +4,7 @@ using Hextant;
 using UnityEditor;
 using UnityEngine;
 
-namespace Package.Editor
+namespace FinTOKMAK.GlobalEventSystem.Editor
 {
     [CustomPropertyDrawer(typeof(GlobalEventAttribute))]
     public class GlobalEventDrawer : PropertyDrawer
