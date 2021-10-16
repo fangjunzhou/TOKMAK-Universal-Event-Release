@@ -1,0 +1,210 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Unity Project/TOKMAK-Global-Event/Assets/TOKMAK-Global-Event/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.GlobalEventAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.GlobalEventAttribute.html",
+          "hash": "9E89jzQYKJvNDocwLuGbIfCs1ibdROdt8Ic7nhWthig="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.html",
+          "hash": "o7vWmBNJYwMKOV4x2dfQDtVg9YDj0AhPbo0O2DfQm4M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.html",
+          "hash": "9OAdg3dNKl1H8AJaO0+VAjg+Ox2dC/DGmjHr/nNP7uU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-1.html",
+          "hash": "jCoWs5AG8vYGKvwFNxvIoV2OE7AwauWQ66/GJFKzVuw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-2.html",
+          "hash": "dBAsNddi/Ej99orEyuY0fAvqWs8eX6D8eilwuGlGL/s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData.html",
+          "hash": "g6xTnFveqWRdUpGWIpw/A3HptKV0kAPkjXaZ1P6Z5pU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html",
+          "hash": "qv80UWQf3qZqlAOuMV9snhpheKEmPZ/YCBw8C08ZgR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.html",
+          "hash": "y/32/TwOHv9lZOYfqd6nO3CMkw38bqKQwcXr7QmC3Cs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData.html",
+          "hash": "jRD1m2bxFpVaGQCpGZFWpChQJJGaQSPGRzrLSb+tZbY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.GlobalEventSystem.Runtime.html",
+          "hash": "rX6liCY8m25Q7bmiuTa3wNswJ7uy5g92SkSv4eRnVaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "HkqgjFZ9EBDXAzehFWI1AIns5Zm7FuiCvb5wc6eyHU0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "dAQFJUVaS2r7IsHQaCmUiCa10OXnmKqI0Ktwwv7TD1c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "MC/61WaQ+zyxQ/cRHwt7z9mj8D4Wlsvdu/9PzQfYI6s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 10
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
