@@ -10,26 +10,9 @@ namespace FinTOKMAK.EventSystem.Runtime
     /// <summary>
     /// This MonoBehaviour provides global event management
     /// </summary>
-    public class GlobalEventManager : MonoBehaviour
+    public class UniversalEventManager : MonoBehaviour
     {
-        #region Singleton
-
-        /// <summary>
-        /// The singleton of GlobalEventConfig
-        /// </summary>
-        public static GlobalEventManager Instance;
         
-        /// <summary>
-        /// If the GlobalEventManager is initialized
-        /// </summary>
-        public static bool initialized = false;
-
-        /// <summary>
-        /// Call this event when GlobalEventManager finish initialization
-        /// </summary>
-        public static Action finishInitializeEvent;
-
-        #endregion
         
         #region Public Field
         
@@ -39,32 +22,21 @@ namespace FinTOKMAK.EventSystem.Runtime
 
         #region Private Field
 
-        private GlobalEventConfig _config;
+        private UniversalEventConfig _config;
         
         /// <summary>
         /// The dictionary for the system to call the global event
         /// </summary>
-        private Dictionary<string, Action<IGlobalEventData>> _eventTable =
-            new Dictionary<string, Action<IGlobalEventData>>();
+        private Dictionary<string, Action<IEventData>> _eventTable =
+            new Dictionary<string, Action<IEventData>>();
 
         #endregion
 
-        private void Awake()
+        protected virtual void Awake()
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            DontDestroyOnLoad(this);
-            _config =  GlobalEventSettings.instance.globalEventConfig;
-            
-            Instance = this;
-            
+            _config = GetEventConfig();
+
             InitializeEventTable();
-            
-            finishInitializeEvent?.Invoke();
-            initialized = true;
         }
 
         #region Private Field
@@ -86,11 +58,20 @@ namespace FinTOKMAK.EventSystem.Runtime
         #region Public Field
 
         /// <summary>
+        /// The method to get the event config for the EventManager. 
+        /// </summary>
+        /// <returns>Event config of current event set.</returns>
+        public virtual UniversalEventConfig GetEventConfig()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Call this method to invoke a global event with certain data
         /// </summary>
         /// <param name="eventName">the name of the event</param>
         /// <param name="data">the event data to pass in</param>
-        public void InvokeEvent(string eventName, IGlobalEventData data)
+        public void InvokeEvent(string eventName, IEventData data)
         {
             _eventTable[eventName]?.Invoke(data);
         }
@@ -100,7 +81,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         /// </summary>
         /// <param name="eventName">the target event name</param>
         /// <param name="registerEvent">the register method or logic</param>
-        public void RegisterEvent(string eventName, Action<IGlobalEventData> registerEvent)
+        public void RegisterEvent(string eventName, Action<IEventData> registerEvent)
         {
             _eventTable[eventName] += registerEvent;
         }
@@ -110,7 +91,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         /// </summary>
         /// <param name="eventName">the target event name</param>
         /// <param name="registerEvent">the register method or logic</param>
-        public void UnRegisterEvent(string eventName, Action<IGlobalEventData> registerEvent)
+        public void UnRegisterEvent(string eventName, Action<IEventData> registerEvent)
         {
             _eventTable[eventName] -= registerEvent;
         }

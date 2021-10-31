@@ -1,15 +1,14 @@
+using System;
 using FinTOKMAK.EventSystem.Runtime;
-using FinTOKMAK.EventSystem.Runtime.AttributeDrawers;
 using Hextant;
 using UnityEditor;
 using UnityEngine;
 
 namespace FinTOKMAK.EventSystem.Editor
 {
-    [CustomPropertyDrawer(typeof(GlobalEventAttribute))]
-    public class GlobalEventDrawer : PropertyDrawer
+    public class UniversalEventDrawer : PropertyDrawer
     {
-        private GlobalEventConfig _config;
+        private UniversalEventConfig _config;
 
         private string[] _options;
         private int _index = 0;
@@ -27,7 +26,9 @@ namespace FinTOKMAK.EventSystem.Editor
             
             if (_config == null)
             {
-                _config = Settings<GlobalEventSettings>.instance.globalEventConfig;
+                //_config = Settings<GlobalEventSettings>.instance.universalEventConfig;
+                _config = GetEventConfig();
+                
                 if (_config == null)
                 {
                     position.height = 35;
@@ -51,9 +52,13 @@ namespace FinTOKMAK.EventSystem.Editor
             property.stringValue = _options[_index];
         }
 
-        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        /// <summary>
+        /// The method to get the event config for the property drawer.
+        /// </summary>
+        /// <returns>The event config of current event set.</returns>
+        public virtual UniversalEventConfig GetEventConfig()
         {
-            return base.GetPropertyHeight(property, label);
+            throw new NotImplementedException();
         }
     }
 }

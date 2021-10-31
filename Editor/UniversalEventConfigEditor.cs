@@ -563,8 +563,8 @@ namespace FinTOKMAK.EventSystem.Editor
         }
     }
     
-    [CustomEditor(typeof(GlobalEventConfig))]
-    public class GlobalEventConfigEditor : UnityEditor.Editor
+    [CustomEditor(typeof(UniversalEventConfig))]
+    public class UniversalEventConfigEditor : UnityEditor.Editor
     {
         #region Private Field
 
@@ -697,7 +697,7 @@ namespace FinTOKMAK.EventSystem.Editor
         /// </summary>
         private void SaveAllPath()
         {
-            GlobalEventConfig config = (GlobalEventConfig) serializedObject.targetObject;
+            UniversalEventConfig config = (UniversalEventConfig) serializedObject.targetObject;
             config.eventNames = _root.GetAllEvents().ToList();
             EditorUtility.SetDirty(config);
         }
@@ -707,7 +707,7 @@ namespace FinTOKMAK.EventSystem.Editor
         /// </summary>
         private void ReadFromConfig()
         {
-            GlobalEventConfig config = (GlobalEventConfig) serializedObject.targetObject;
+            UniversalEventConfig config = (UniversalEventConfig) serializedObject.targetObject;
 
             if (config.eventNames == null)
             {

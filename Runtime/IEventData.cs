@@ -3,7 +3,7 @@ namespace FinTOKMAK.EventSystem.Runtime
     /// <summary>
     /// The data pass into the global event
     /// </summary>
-    public interface IGlobalEventData
+    public interface IEventData
     {
         
     }
@@ -11,7 +11,7 @@ namespace FinTOKMAK.EventSystem.Runtime
     /// <summary>
     /// The GlobalEventData with 0 parameter
     /// </summary>
-    public struct GlobalEventData : IGlobalEventData
+    public struct EventData : IEventData
     {
         
     }
@@ -20,7 +20,7 @@ namespace FinTOKMAK.EventSystem.Runtime
     /// The GlobalEventData with 1 parameter
     /// </summary>
     /// <typeparam name="T1">the generic type of first parameter</typeparam>
-    public struct GlobalEventData<T1> : IGlobalEventData
+    public struct EventData<T1> : IEventData
     {
         public T1 data1;
     }
@@ -30,7 +30,7 @@ namespace FinTOKMAK.EventSystem.Runtime
     /// </summary>
     /// <typeparam name="T1">the generic type of first parameter</typeparam>
     /// <typeparam name="T2">the generic type of second parameter</typeparam>
-    public struct GlobalEventData<T1, T2> : IGlobalEventData
+    public struct EventData<T1, T2> : IEventData
     {
         public T1 data1;
         public T2 data2;
