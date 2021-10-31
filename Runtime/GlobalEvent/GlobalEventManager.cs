@@ -10,7 +10,7 @@ namespace FinTOKMAK.EventSystem.Runtime.GlobalEvent
         /// <summary>
         /// The singleton of GlobalEventConfig
         /// </summary>
-        public static UniversalEventManager Instance;
+        public static GlobalEventManager Instance;
         
         /// <summary>
         /// If the GlobalEventManager is initialized
@@ -31,13 +31,14 @@ namespace FinTOKMAK.EventSystem.Runtime.GlobalEvent
 
         protected override void Awake()
         {
-            base.Awake();
-            
             if (Instance != null)
             {
                 Destroy(gameObject);
                 return;
             }
+            
+            base.Awake();
+            
             DontDestroyOnLoad(this);
             Instance = this;
             finishInitializeEvent?.Invoke();
