@@ -1,10 +1,10 @@
 {
-    "name": "FinTOKMAK.GlobalEventSystem.Tests.Runtime",
+    "name": "FinTOKMAK.EventSystem.Tests.Runtime",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "FinTOKMAK.GlobalEventSystem.Runtime"
+        "FinTOKMAK.EventSystem.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace FinTOKMAK.GlobalEventSystem.Runtime
+namespace FinTOKMAK.EventSystem.Runtime
 {
     /// <summary>
     /// The config file for global events

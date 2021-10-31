@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using FinTOKMAK.GlobalEventSystem.Runtime;
+using FinTOKMAK.EventSystem.Runtime;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using UnityEngine;

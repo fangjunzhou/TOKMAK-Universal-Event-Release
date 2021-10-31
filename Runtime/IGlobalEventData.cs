@@ -1,4 +1,4 @@
-namespace FinTOKMAK.GlobalEventSystem.Runtime
+namespace FinTOKMAK.EventSystem.Runtime
 {
     /// <summary>
     /// The data pass into the global event

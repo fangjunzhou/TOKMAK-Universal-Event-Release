@@ -1,10 +1,10 @@
-using FinTOKMAK.GlobalEventSystem.Runtime;
-using FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers;
+using FinTOKMAK.EventSystem.Runtime;
+using FinTOKMAK.EventSystem.Runtime.AttributeDrawers;
 using Hextant;
 using UnityEditor;
 using UnityEngine;
 
-namespace FinTOKMAK.GlobalEventSystem.Editor
+namespace FinTOKMAK.EventSystem.Editor
 {
     [CustomPropertyDrawer(typeof(GlobalEventAttribute))]
     public class GlobalEventDrawer : PropertyDrawer

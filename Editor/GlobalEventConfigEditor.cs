@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using FinTOKMAK.GlobalEventSystem.Runtime;
+using FinTOKMAK.EventSystem.Runtime;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace FinTOKMAK.GlobalEventSystem.Editor
+namespace FinTOKMAK.EventSystem.Editor
 {
     /// <summary>
     /// The interface for PathDirectory and PathEvent

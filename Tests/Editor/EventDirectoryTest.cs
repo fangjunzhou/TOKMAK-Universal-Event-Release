@@ -1,4 +1,4 @@
-using FinTOKMAK.GlobalEventSystem.Editor;
+using FinTOKMAK.EventSystem.Editor;
 using NUnit.Framework;
 
 public class EventDirectoryTest

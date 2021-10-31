@@ -5,7 +5,7 @@ using Hextant;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace FinTOKMAK.GlobalEventSystem.Runtime
+namespace FinTOKMAK.EventSystem.Runtime
 {
     /// <summary>
     /// This MonoBehaviour provides global event management

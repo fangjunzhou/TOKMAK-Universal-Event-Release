@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers
+namespace FinTOKMAK.EventSystem.Runtime.AttributeDrawers
 {
     public class GlobalEventAttribute : PropertyAttribute
     {
