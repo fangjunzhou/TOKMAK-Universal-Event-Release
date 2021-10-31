@@ -177,6 +177,7 @@ public class GlobalEventTest
     [TearDown]
     public void TearDown()
     {
-        Object.Destroy(_manager.gameObject);
+        GameObject.Destroy(_manager.gameObject);
+        GlobalEventManager.Instance = null;
     }
 }
