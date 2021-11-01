@@ -1,8 +1,8 @@
-# TOKMAK Global Event
+# TOKMAK Universal Event
 
 ![GitHub Page](https://user-images.githubusercontent.com/79500078/137570424-1749e4d4-dc0f-444f-b02f-52cbcd56baf6.png)
 
-This is a global event system for Unity that is easy to use, easy to configure, and really flexible. You can event build up your own MVC framework using this package.
+This is a universal event system for Unity that is easy to use, easy to configure, and really flexible. You can event build up your own MVC framework using this package.
 
 # Prerequisite
 
@@ -23,7 +23,7 @@ or add in the manifest.json
 
 # Documentation
 
-[Here](https://fangjun-zhou.github.io/TOKMAK-Global-Event/) is the documentation of TOKMAK Global Event System.
+[Here](https://fangjun-zhou.github.io/TOKMAK-Universal-Event/) is the documentation of TOKMAK Universal Event System.
 
 # Usage
 
