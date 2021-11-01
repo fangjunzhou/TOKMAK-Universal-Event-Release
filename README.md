@@ -15,23 +15,23 @@ This is a universal event system for Unity that is easy to use, easy to configur
 
 Use the Package Manager to install from url
 
-`https://github.com/Fangjun-Zhou/Unity-Global-Event-System.git`
+`https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event.git`
 
 or add in the manifest.json
 
-`"com.fintokmak.globaleventsystem": "https://github.com/Fangjun-Zhou/Unity-Global-Event-System.git"`
+`"com.fintokmak.universaleventsystem": "https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event.git"`
 
 # Documentation
 
 [Here](https://fangjun-zhou.github.io/TOKMAK-Universal-Event/) is the documentation of TOKMAK Universal Event System.
 
-# Usage
+# Usage of Global Event (a build-in implementation of universal event)
 
 ## 1. TOKMAK Global Event Config
 
 Before you start using the global event system, you need to have a config file prepare for later use.
 
-Pick any place in your project, right click and choose: Create/FinTOKMAK/Global Event/Create Config
+Pick any place in your project, right click and choose: Create/FinTOKMAK/Universal Event/Create Config
 
 ![image](https://user-images.githubusercontent.com/79500078/137571850-65e4ff12-0a40-4818-93fc-a4593054ca2d.png)
 
@@ -53,17 +53,17 @@ Using the fold/expand button, you can fold and expand the directory.
 
 This event config system is pretty easy to use, you should be very familiar with it in just a few minutes!
 
-## 4. IGlobalEventData
+## 4. IEventData
 
-All the event should pass in an `IGlobalEventData`, even if there's no value to pass through event.
+All the event should pass in an `IEventData`, even if there's no value to pass through event.
 
-In the TOKMAK Global Event System, there are already 3 build in Event data wrapper class (maybe more in the future):
+In the TOKMAK Universal Event System, there are already 3 build in Event data wrapper class (maybe more in the future):
 
 ```C#
 /// <summary>
 /// The GlobalEventData with 0 parameter
 /// </summary>
-public struct GlobalEventData : IGlobalEventData
+public struct EventData : IEventData
 {
 
 }
@@ -72,7 +72,7 @@ public struct GlobalEventData : IGlobalEventData
 /// The GlobalEventData with 1 parameter
 /// </summary>
 /// <typeparam name="T1">the generic type of first parameter</typeparam>
-public struct GlobalEventData<T1> : IGlobalEventData
+public struct EventData<T1> : IEventData
 {
     public T1 data1;
 }
@@ -82,7 +82,7 @@ public struct GlobalEventData<T1> : IGlobalEventData
 /// </summary>
 /// <typeparam name="T1">the generic type of first parameter</typeparam>
 /// <typeparam name="T2">the generic type of second parameter</typeparam>
-public struct GlobalEventData<T1, T2> : IGlobalEventData
+public struct EventData<T1, T2> : IEventData
 {
     public T1 data1;
     public T2 data2;
@@ -97,7 +97,7 @@ To extand an event data, you just need to create a struct inheriting IGlobalEven
 /// <summary>
 /// The sample global event data with a string message and a int message.
 /// </summary>
-public struct DemoGlobalEventData : IGlobalEventData
+public struct DemoGlobalEventData : IEventData
 {
     public string strMsg;
     public int intMsg;
@@ -108,7 +108,7 @@ public struct DemoGlobalEventData : IGlobalEventData
 /// </summary>
 /// <typeparam name="T1">The generic type 1.</typeparam>
 /// <typeparam name="T2">The generic type 2.</typeparam>
-public struct DemoGlobalGenericData<T1, T2> : IGlobalEventData
+public struct DemoGlobalGenericData<T1, T2> : IEventData
 {
     public T1 data1;
     public T2 data2;
@@ -228,7 +228,7 @@ Inside these two methods, you need to cast the raw IGlobalEventData into specifi
 /// The listener of the string and int data event.
 /// </summary>
 /// <param name="data">The unconverted IGlobalEventData.</param>
-private void ResponseEventData(IGlobalEventData data)
+private void ResponseEventData(IEventData data)
 {
     // Convert data to the DemoGlobalEventData
     DemoGlobalEventData eventData = (DemoGlobalEventData) data;
@@ -239,7 +239,7 @@ private void ResponseEventData(IGlobalEventData data)
 /// The listener of the generic data event.
 /// </summary>
 /// <param name="data">The unconverted IGlobalEventData.</param>
-private void ResponseGenericData(IGlobalEventData data)
+private void ResponseGenericData(IEventData data)
 {
     // Convert the data to DemoGlobalGenericData<float, string>
     DemoGlobalGenericData<float, string> eventData = (DemoGlobalGenericData<float, string>) data;
