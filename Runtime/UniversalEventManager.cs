@@ -8,7 +8,7 @@ using UnityEngine;
 namespace FinTOKMAK.EventSystem.Runtime
 {
     /// <summary>
-    /// This MonoBehaviour provides global event management
+    /// This MonoBehaviour provides event management
     /// </summary>
     public class UniversalEventManager : MonoBehaviour
     {
@@ -25,7 +25,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         private UniversalEventConfig _config;
         
         /// <summary>
-        /// The dictionary for the system to call the global event
+        /// The dictionary for the system to call the event
         /// </summary>
         private Dictionary<string, Action<IEventData>> _eventTable =
             new Dictionary<string, Action<IEventData>>();
@@ -67,7 +67,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         }
 
         /// <summary>
-        /// Call this method to invoke a global event with certain data
+        /// Call this method to invoke a event with certain data
         /// </summary>
         /// <param name="eventName">the name of the event</param>
         /// <param name="data">the event data to pass in</param>

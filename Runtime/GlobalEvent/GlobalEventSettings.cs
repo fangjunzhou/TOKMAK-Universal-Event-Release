@@ -7,6 +7,9 @@ using UnityEditor;
 
 namespace FinTOKMAK.EventSystem.Runtime.GlobalEvent
 {
+    /// <summary>
+    /// The settings for global event, similar settings for local event
+    /// </summary>
     [Settings( SettingsUsage.RuntimeProject, "FinTOKMAK Global Event" )]
     public sealed class GlobalEventSettings : Settings<GlobalEventSettings>
     {
