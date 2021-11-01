@@ -1,0 +1,2014 @@
+id: cs.temp.dll
+language: CSharp
+name:
+  Default: cs.temp.dll
+qualifiedName:
+  Default: cs.temp.dll
+type: Assembly
+modifiers: {}
+items:
+- id: FinTOKMAK.EventSystem.Runtime
+  commentId: N:FinTOKMAK.EventSystem.Runtime
+  language: CSharp
+  name:
+    CSharp: FinTOKMAK.EventSystem.Runtime
+    VB: FinTOKMAK.EventSystem.Runtime
+  nameWithType:
+    CSharp: FinTOKMAK.EventSystem.Runtime
+    VB: FinTOKMAK.EventSystem.Runtime
+  qualifiedName:
+    CSharp: FinTOKMAK.EventSystem.Runtime
+    VB: FinTOKMAK.EventSystem.Runtime
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  modifiers: {}
+  items:
+  - id: FinTOKMAK.EventSystem.Runtime.IEventData
+    commentId: T:FinTOKMAK.EventSystem.Runtime.IEventData
+    language: CSharp
+    name:
+      CSharp: IEventData
+      VB: IEventData
+    nameWithType:
+      CSharp: IEventData
+      VB: IEventData
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.IEventData
+      VB: FinTOKMAK.EventSystem.Runtime.IEventData
+    type: Interface
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime
+    source:
+      id: IEventData
+      path: ''
+      startLine: 5
+    summary: "\nThe data pass into the global event\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public interface IEventData
+        VB: Public Interface IEventData
+    modifiers:
+      CSharp:
+      - public
+      - interface
+      VB:
+      - Public
+      - Interface
+    items: []
+  - id: FinTOKMAK.EventSystem.Runtime.EventData
+    commentId: T:FinTOKMAK.EventSystem.Runtime.EventData
+    language: CSharp
+    name:
+      CSharp: EventData
+      VB: EventData
+    nameWithType:
+      CSharp: EventData
+      VB: EventData
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.EventData
+      VB: FinTOKMAK.EventSystem.Runtime.EventData
+    type: Struct
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime
+    source:
+      id: EventData
+      path: ''
+      startLine: 13
+    summary: "\nThe GlobalEventData with 0 parameter\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public struct EventData : IEventData'
+        VB: >-
+          Public Structure EventData
+
+              Implements IEventData
+    implements:
+    - FinTOKMAK.EventSystem.Runtime.IEventData
+    inheritedMembers:
+    - System.ValueType.Equals(System.Object)
+    - System.ValueType.GetHashCode
+    - System.ValueType.ToString
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetType
+    modifiers:
+      CSharp:
+      - public
+      - struct
+      VB:
+      - Public
+      - Structure
+    items: []
+  - id: FinTOKMAK.EventSystem.Runtime.EventData`1
+    commentId: T:FinTOKMAK.EventSystem.Runtime.EventData`1
+    language: CSharp
+    name:
+      CSharp: EventData<T1>
+      VB: EventData(Of T1)
+    nameWithType:
+      CSharp: EventData<T1>
+      VB: EventData(Of T1)
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.EventData<T1>
+      VB: FinTOKMAK.EventSystem.Runtime.EventData(Of T1)
+    type: Struct
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime
+    source:
+      id: EventData
+      path: ''
+      startLine: 22
+    summary: "\nThe GlobalEventData with 1 parameter\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public struct EventData<T1> : IEventData'
+        VB: >-
+          Public Structure EventData(Of T1)
+
+              Implements IEventData
+      typeParameters:
+      - id: T1
+        description: the generic type of first parameter
+    implements:
+    - FinTOKMAK.EventSystem.Runtime.IEventData
+    inheritedMembers:
+    - System.ValueType.Equals(System.Object)
+    - System.ValueType.GetHashCode
+    - System.ValueType.ToString
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetType
+    modifiers:
+      CSharp:
+      - public
+      - struct
+      VB:
+      - Public
+      - Structure
+    items:
+    - id: FinTOKMAK.EventSystem.Runtime.EventData`1.data1
+      commentId: F:FinTOKMAK.EventSystem.Runtime.EventData`1.data1
+      language: CSharp
+      name:
+        CSharp: data1
+        VB: data1
+      nameWithType:
+        CSharp: EventData<T1>.data1
+        VB: EventData(Of T1).data1
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.EventData<T1>.data1
+        VB: FinTOKMAK.EventSystem.Runtime.EventData(Of T1).data1
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: data1
+        path: ''
+        startLine: 24
+      syntax:
+        content:
+          CSharp: public T1 data1
+          VB: Public data1 As T1
+        return:
+          type: '{T1}'
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: FinTOKMAK.EventSystem.Runtime.EventData`2
+    commentId: T:FinTOKMAK.EventSystem.Runtime.EventData`2
+    language: CSharp
+    name:
+      CSharp: EventData<T1, T2>
+      VB: EventData(Of T1, T2)
+    nameWithType:
+      CSharp: EventData<T1, T2>
+      VB: EventData(Of T1, T2)
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.EventData<T1, T2>
+      VB: FinTOKMAK.EventSystem.Runtime.EventData(Of T1, T2)
+    type: Struct
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime
+    source:
+      id: EventData
+      path: ''
+      startLine: 32
+    summary: "\nThe GlobalEventData with 2 parameter\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public struct EventData<T1, T2> : IEventData'
+        VB: >-
+          Public Structure EventData(Of T1, T2)
+
+              Implements IEventData
+      typeParameters:
+      - id: T1
+        description: the generic type of first parameter
+      - id: T2
+        description: the generic type of second parameter
+    implements:
+    - FinTOKMAK.EventSystem.Runtime.IEventData
+    inheritedMembers:
+    - System.ValueType.Equals(System.Object)
+    - System.ValueType.GetHashCode
+    - System.ValueType.ToString
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetType
+    modifiers:
+      CSharp:
+      - public
+      - struct
+      VB:
+      - Public
+      - Structure
+    items:
+    - id: FinTOKMAK.EventSystem.Runtime.EventData`2.data1
+      commentId: F:FinTOKMAK.EventSystem.Runtime.EventData`2.data1
+      language: CSharp
+      name:
+        CSharp: data1
+        VB: data1
+      nameWithType:
+        CSharp: EventData<T1, T2>.data1
+        VB: EventData(Of T1, T2).data1
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.EventData<T1, T2>.data1
+        VB: FinTOKMAK.EventSystem.Runtime.EventData(Of T1, T2).data1
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: data1
+        path: ''
+        startLine: 34
+      syntax:
+        content:
+          CSharp: public T1 data1
+          VB: Public data1 As T1
+        return:
+          type: '{T1}'
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: FinTOKMAK.EventSystem.Runtime.EventData`2.data2
+      commentId: F:FinTOKMAK.EventSystem.Runtime.EventData`2.data2
+      language: CSharp
+      name:
+        CSharp: data2
+        VB: data2
+      nameWithType:
+        CSharp: EventData<T1, T2>.data2
+        VB: EventData(Of T1, T2).data2
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.EventData<T1, T2>.data2
+        VB: FinTOKMAK.EventSystem.Runtime.EventData(Of T1, T2).data2
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: data2
+        path: ''
+        startLine: 35
+      syntax:
+        content:
+          CSharp: public T2 data2
+          VB: Public data2 As T2
+        return:
+          type: '{T2}'
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+    commentId: T:FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+    language: CSharp
+    name:
+      CSharp: UniversalEventConfig
+      VB: UniversalEventConfig
+    nameWithType:
+      CSharp: UniversalEventConfig
+      VB: UniversalEventConfig
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+      VB: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime
+    source:
+      id: UniversalEventConfig
+      path: ''
+      startLine: 46
+    summary: "\nThe config file for global events\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class UniversalEventConfig : ScriptableObject'
+        VB: >-
+          Public Class UniversalEventConfig
+
+              Inherits ScriptableObject
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+      commentId: F:FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+      language: CSharp
+      name:
+        CSharp: eventNames
+        VB: eventNames
+      nameWithType:
+        CSharp: UniversalEventConfig.eventNames
+        VB: UniversalEventConfig.eventNames
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+        VB: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: eventNames
+        path: ''
+        startLine: 54
+      summary: "\nAll the global event names\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public List<string> eventNames
+          VB: Public eventNames As List(Of String)
+        return:
+          type: List{System.String}
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    commentId: T:FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    language: CSharp
+    name:
+      CSharp: UniversalEventManager
+      VB: UniversalEventManager
+    nameWithType:
+      CSharp: UniversalEventManager
+      VB: UniversalEventManager
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+      VB: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime
+    source:
+      id: UniversalEventManager
+      path: ''
+      startLine: 71
+    summary: "\nThis MonoBehaviour provides event management\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class UniversalEventManager : MonoBehaviour'
+        VB: >-
+          Public Class UniversalEventManager
+
+              Inherits MonoBehaviour
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+      commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+      language: CSharp
+      name:
+        CSharp: Awake()
+        VB: Awake()
+      nameWithType:
+        CSharp: UniversalEventManager.Awake()
+        VB: UniversalEventManager.Awake()
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake()
+        VB: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: Awake
+        path: ''
+        startLine: 93
+      syntax:
+        content:
+          CSharp: protected virtual void Awake()
+          VB: Protected Overridable Sub Awake
+      overload: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake*
+      modifiers:
+        CSharp:
+        - protected
+        - virtual
+        VB:
+        - Protected
+        - Overridable
+    - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+      commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+      language: CSharp
+      name:
+        CSharp: GetEventConfig()
+        VB: GetEventConfig()
+      nameWithType:
+        CSharp: UniversalEventManager.GetEventConfig()
+        VB: UniversalEventManager.GetEventConfig()
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig()
+        VB: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: GetEventConfig
+        path: ''
+        startLine: 122
+      summary: "\nThe method to get the event config for the EventManager. \n"
+      example: []
+      syntax:
+        content:
+          CSharp: public virtual UniversalEventConfig GetEventConfig()
+          VB: Public Overridable Function GetEventConfig As UniversalEventConfig
+        return:
+          type: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+          description: Event config of current event set.
+      overload: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig*
+      modifiers:
+        CSharp:
+        - public
+        - virtual
+        VB:
+        - Public
+        - Overridable
+    - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+      commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+      language: CSharp
+      name:
+        CSharp: InvokeEvent(String, IEventData)
+        VB: InvokeEvent(String, IEventData)
+      nameWithType:
+        CSharp: UniversalEventManager.InvokeEvent(String, IEventData)
+        VB: UniversalEventManager.InvokeEvent(String, IEventData)
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String, FinTOKMAK.EventSystem.Runtime.IEventData)
+        VB: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String, FinTOKMAK.EventSystem.Runtime.IEventData)
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: InvokeEvent
+        path: ''
+        startLine: 132
+      summary: "\nCall this method to invoke a event with certain data\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public void InvokeEvent(string eventName, IEventData data)
+          VB: Public Sub InvokeEvent(eventName As String, data As IEventData)
+        parameters:
+        - id: eventName
+          type: System.String
+          description: the name of the event
+        - id: data
+          type: FinTOKMAK.EventSystem.Runtime.IEventData
+          description: the event data to pass in
+      overload: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+      commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+      language: CSharp
+      name:
+        CSharp: RegisterEvent(String, Action<IEventData>)
+        VB: RegisterEvent(String, Action(Of IEventData))
+      nameWithType:
+        CSharp: UniversalEventManager.RegisterEvent(String, Action<IEventData>)
+        VB: UniversalEventManager.RegisterEvent(String, Action(Of IEventData))
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String, Action<FinTOKMAK.EventSystem.Runtime.IEventData>)
+        VB: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String, Action(Of FinTOKMAK.EventSystem.Runtime.IEventData))
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: RegisterEvent
+        path: ''
+        startLine: 142
+      summary: "\nRegister a method into the event\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public void RegisterEvent(string eventName, Action<IEventData> registerEvent)
+          VB: Public Sub RegisterEvent(eventName As String, registerEvent As Action(Of IEventData))
+        parameters:
+        - id: eventName
+          type: System.String
+          description: the target event name
+        - id: registerEvent
+          type: Action{FinTOKMAK.EventSystem.Runtime.IEventData}
+          description: the register method or logic
+      overload: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+      commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+      language: CSharp
+      name:
+        CSharp: UnRegisterEvent(String, Action<IEventData>)
+        VB: UnRegisterEvent(String, Action(Of IEventData))
+      nameWithType:
+        CSharp: UniversalEventManager.UnRegisterEvent(String, Action<IEventData>)
+        VB: UniversalEventManager.UnRegisterEvent(String, Action(Of IEventData))
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String, Action<FinTOKMAK.EventSystem.Runtime.IEventData>)
+        VB: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String, Action(Of FinTOKMAK.EventSystem.Runtime.IEventData))
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime
+      source:
+        id: UnRegisterEvent
+        path: ''
+        startLine: 152
+      summary: "\nUnregister a method from the event\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public void UnRegisterEvent(string eventName, Action<IEventData> registerEvent)
+          VB: Public Sub UnRegisterEvent(eventName As String, registerEvent As Action(Of IEventData))
+        parameters:
+        - id: eventName
+          type: System.String
+          description: the target event name
+        - id: registerEvent
+          type: Action{FinTOKMAK.EventSystem.Runtime.IEventData}
+          description: the register method or logic
+      overload: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+- id: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  commentId: N:FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  language: CSharp
+  name:
+    CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  nameWithType:
+    CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  qualifiedName:
+    CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  modifiers: {}
+  items:
+  - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+    commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+    language: CSharp
+    name:
+      CSharp: GlobalEventAttribute
+      VB: GlobalEventAttribute
+    nameWithType:
+      CSharp: GlobalEventAttribute
+      VB: GlobalEventAttribute
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+      VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    source:
+      id: GlobalEventAttribute
+      path: ''
+      startLine: 165
+    syntax:
+      content:
+        CSharp: 'public class GlobalEventAttribute : PropertyAttribute'
+        VB: >-
+          Public Class GlobalEventAttribute
+
+              Inherits PropertyAttribute
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items: []
+  - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+    commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+    language: CSharp
+    name:
+      CSharp: GlobalEventManager
+      VB: GlobalEventManager
+    nameWithType:
+      CSharp: GlobalEventManager
+      VB: GlobalEventManager
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+      VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    source:
+      id: GlobalEventManager
+      path: ''
+      startLine: 175
+    syntax:
+      content:
+        CSharp: 'public class GlobalEventManager : UniversalEventManager'
+        VB: >-
+          Public Class GlobalEventManager
+
+              Inherits UniversalEventManager
+    inheritance:
+    - System.Object
+    - FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    inheritedMembers:
+    - FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+    - FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+    - FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
+      commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
+      language: CSharp
+      name:
+        CSharp: Instance
+        VB: Instance
+      nameWithType:
+        CSharp: GlobalEventManager.Instance
+        VB: GlobalEventManager.Instance
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
+        VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      source:
+        id: Instance
+        path: ''
+        startLine: 182
+      summary: "\nThe singleton of GlobalEventConfig\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static GlobalEventManager Instance
+          VB: Public Shared Instance As GlobalEventManager
+        return:
+          type: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
+      commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
+      language: CSharp
+      name:
+        CSharp: initialized
+        VB: initialized
+      nameWithType:
+        CSharp: GlobalEventManager.initialized
+        VB: GlobalEventManager.initialized
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
+        VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      source:
+        id: initialized
+        path: ''
+        startLine: 187
+      summary: "\nIf the GlobalEventManager is initialized\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static bool initialized
+          VB: Public Shared initialized As Boolean
+        return:
+          type: System.Boolean
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
+      commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
+      language: CSharp
+      name:
+        CSharp: finishInitializeEvent
+        VB: finishInitializeEvent
+      nameWithType:
+        CSharp: GlobalEventManager.finishInitializeEvent
+        VB: GlobalEventManager.finishInitializeEvent
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
+        VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      source:
+        id: finishInitializeEvent
+        path: ''
+        startLine: 192
+      summary: "\nCall this event when GlobalEventManager finish initialization\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static Action finishInitializeEvent
+          VB: Public Shared finishInitializeEvent As Action
+        return:
+          type: Action
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+    - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+      commentId: M:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+      language: CSharp
+      name:
+        CSharp: GetEventConfig()
+        VB: GetEventConfig()
+      nameWithType:
+        CSharp: GlobalEventManager.GetEventConfig()
+        VB: GlobalEventManager.GetEventConfig()
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig()
+        VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      source:
+        id: GetEventConfig
+        path: ''
+        startLine: 196
+      syntax:
+        content:
+          CSharp: public override UniversalEventConfig GetEventConfig()
+          VB: Public Overrides Function GetEventConfig As UniversalEventConfig
+        return:
+          type: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+      overload: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig*
+      overridden: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+      modifiers:
+        CSharp:
+        - public
+        - override
+        VB:
+        - Public
+        - Overrides
+    - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+      commentId: M:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+      language: CSharp
+      name:
+        CSharp: Awake()
+        VB: Awake()
+      nameWithType:
+        CSharp: GlobalEventManager.Awake()
+        VB: GlobalEventManager.Awake()
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake()
+        VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake()
+      type: Method
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      source:
+        id: Awake
+        path: ''
+        startLine: 201
+      syntax:
+        content:
+          CSharp: protected override void Awake()
+          VB: Protected Overrides Sub Awake
+      overload: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake*
+      overridden: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+      modifiers:
+        CSharp:
+        - protected
+        - override
+        VB:
+        - Protected
+        - Overrides
+  - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+    commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+    language: CSharp
+    name:
+      CSharp: GlobalEventSettings
+      VB: GlobalEventSettings
+    nameWithType:
+      CSharp: GlobalEventSettings
+      VB: GlobalEventSettings
+    qualifiedName:
+      CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+      VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+    type: Class
+    assemblies:
+    - cs.temp.dll
+    namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    source:
+      id: GlobalEventSettings
+      path: ''
+      startLine: 230
+    summary: "\nThe settings for global event, similar settings for local event\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public sealed class GlobalEventSettings : Settings<GlobalEventSettings>'
+        VB: >-
+          Public NotInheritable Class GlobalEventSettings
+
+              Inherits Settings(Of GlobalEventSettings)
+    inheritance:
+    - System.Object
+    modifiers:
+      CSharp:
+      - public
+      - sealed
+      - class
+      VB:
+      - Public
+      - NotInheritable
+      - Class
+    items:
+    - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+      commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+      language: CSharp
+      name:
+        CSharp: universalEventConfig
+        VB: universalEventConfig
+      nameWithType:
+        CSharp: GlobalEventSettings.universalEventConfig
+        VB: GlobalEventSettings.universalEventConfig
+      qualifiedName:
+        CSharp: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+        VB: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+      type: Field
+      assemblies:
+      - cs.temp.dll
+      namespace: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      source:
+        id: universalEventConfig
+        path: ''
+        startLine: 233
+      syntax:
+        content:
+          CSharp: public UniversalEventConfig universalEventConfig
+          VB: Public universalEventConfig As UniversalEventConfig
+        return:
+          type: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+references:
+  FinTOKMAK.EventSystem.Runtime.IEventData:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime
+    commentId: T:FinTOKMAK.EventSystem.Runtime.IEventData
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.ValueType:
+    name:
+      CSharp:
+      - id: System.ValueType
+        name: ValueType
+        nameWithType: ValueType
+        qualifiedName: System.ValueType
+        isExternal: true
+      VB:
+      - id: System.ValueType
+        name: ValueType
+        nameWithType: ValueType
+        qualifiedName: System.ValueType
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.ValueType
+  System.ValueType.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.ValueType.Equals(System.Object)
+        name: Equals
+        nameWithType: ValueType.Equals
+        qualifiedName: System.ValueType.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.ValueType.Equals(System.Object)
+        name: Equals
+        nameWithType: ValueType.Equals
+        qualifiedName: System.ValueType.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.ValueType
+    commentId: M:System.ValueType.Equals(System.Object)
+  System.ValueType.GetHashCode:
+    name:
+      CSharp:
+      - id: System.ValueType.GetHashCode
+        name: GetHashCode
+        nameWithType: ValueType.GetHashCode
+        qualifiedName: System.ValueType.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.ValueType.GetHashCode
+        name: GetHashCode
+        nameWithType: ValueType.GetHashCode
+        qualifiedName: System.ValueType.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.ValueType
+    commentId: M:System.ValueType.GetHashCode
+  System.ValueType.ToString:
+    name:
+      CSharp:
+      - id: System.ValueType.ToString
+        name: ToString
+        nameWithType: ValueType.ToString
+        qualifiedName: System.ValueType.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.ValueType.ToString
+        name: ToString
+        nameWithType: ValueType.ToString
+        qualifiedName: System.ValueType.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.ValueType
+    commentId: M:System.ValueType.ToString
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  FinTOKMAK.EventSystem.Runtime:
+    name:
+      CSharp:
+      - name: FinTOKMAK.EventSystem.Runtime
+        nameWithType: FinTOKMAK.EventSystem.Runtime
+        qualifiedName: FinTOKMAK.EventSystem.Runtime
+      VB:
+      - name: FinTOKMAK.EventSystem.Runtime
+        nameWithType: FinTOKMAK.EventSystem.Runtime
+        qualifiedName: FinTOKMAK.EventSystem.Runtime
+    isDefinition: true
+    commentId: N:FinTOKMAK.EventSystem.Runtime
+  FinTOKMAK.EventSystem.Runtime.EventData:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.EventData
+        name: EventData
+        nameWithType: EventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.EventData
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.EventData
+        name: EventData
+        nameWithType: EventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.EventData
+    isDefinition: true
+    commentId: T:FinTOKMAK.EventSystem.Runtime.EventData
+  T1:
+    name:
+      CSharp:
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      VB:
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+    isDefinition: true
+  '{T1}':
+    name:
+      CSharp:
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      VB:
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+    isDefinition: false
+    definition: T1
+    commentId: '!:T1'
+  FinTOKMAK.EventSystem.Runtime.EventData`1:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.EventData`1
+        name: EventData
+        nameWithType: EventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.EventData
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.EventData`1
+        name: EventData
+        nameWithType: EventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.EventData
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:FinTOKMAK.EventSystem.Runtime.EventData`1
+  T2:
+    name:
+      CSharp:
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+      VB:
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+    isDefinition: true
+    commentId: '!:T2'
+  '{T2}':
+    name:
+      CSharp:
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+      VB:
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+    isDefinition: false
+    definition: T2
+    commentId: '!:T2'
+  FinTOKMAK.EventSystem.Runtime.EventData`2:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.EventData`2
+        name: EventData
+        nameWithType: EventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.EventData
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.EventData`2
+        name: EventData
+        nameWithType: EventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.EventData
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T1
+        nameWithType: T1
+        qualifiedName: T1
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T2
+        nameWithType: T2
+        qualifiedName: T2
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:FinTOKMAK.EventSystem.Runtime.EventData`2
+  List`1:
+    name:
+      CSharp:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: '!:List`1'
+  List{System.String}:
+    name:
+      CSharp:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: List`1
+        name: List
+        nameWithType: List
+        qualifiedName: List
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: List`1
+    commentId: '!:List{System.String}'
+  FinTOKMAK.EventSystem.Runtime.UniversalEventConfig:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+        name: UniversalEventConfig
+        nameWithType: UniversalEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+        name: UniversalEventConfig
+        nameWithType: UniversalEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime
+    commentId: T:FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake*
+        name: Awake
+        nameWithType: UniversalEventManager.Awake
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake*
+        name: Awake
+        nameWithType: UniversalEventManager.Awake
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig*
+        name: GetEventConfig
+        nameWithType: UniversalEventManager.GetEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig*
+        name: GetEventConfig
+        nameWithType: UniversalEventManager.GetEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent*
+        name: InvokeEvent
+        nameWithType: UniversalEventManager.InvokeEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent*
+        name: InvokeEvent
+        nameWithType: UniversalEventManager.InvokeEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+  Action`1:
+    name:
+      CSharp:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: ''
+        nameWithType: ''
+        qualifiedName: ''
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+  Action{FinTOKMAK.EventSystem.Runtime.IEventData}:
+    name:
+      CSharp:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: Action`1
+    commentId: '!:Action{FinTOKMAK.EventSystem.Runtime.IEventData}'
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent*
+        name: RegisterEvent
+        nameWithType: UniversalEventManager.RegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent*
+        name: RegisterEvent
+        nameWithType: UniversalEventManager.RegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent*
+        name: UnRegisterEvent
+        nameWithType: UniversalEventManager.UnRegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent*
+        name: UnRegisterEvent
+        nameWithType: UniversalEventManager.UnRegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+        name: UniversalEventManager
+        nameWithType: UniversalEventManager
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+        name: UniversalEventManager
+        nameWithType: UniversalEventManager
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime
+    commentId: T:FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+  FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+        name: GlobalEventAttribute
+        nameWithType: GlobalEventAttribute
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+        name: GlobalEventAttribute
+        nameWithType: GlobalEventAttribute
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+    isDefinition: true
+    commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData):
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+        name: InvokeEvent
+        nameWithType: UniversalEventManager.InvokeEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+        name: InvokeEvent
+        nameWithType: UniversalEventManager.InvokeEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+  ? FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  : name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+        name: RegisterEvent
+        nameWithType: UniversalEventManager.RegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+        name: RegisterEvent
+        nameWithType: UniversalEventManager.RegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  ? FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  : name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+        name: UnRegisterEvent
+        nameWithType: UniversalEventManager.UnRegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+        name: UnRegisterEvent
+        nameWithType: UniversalEventManager.UnRegisterEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: Action`1
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: FinTOKMAK.EventSystem.Runtime.IEventData
+        name: IEventData
+        nameWithType: IEventData
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.IEventData
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  FinTOKMAK.EventSystem.Runtime.GlobalEvent:
+    name:
+      CSharp:
+      - name: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+        nameWithType: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+      VB:
+      - name: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+        nameWithType: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    isDefinition: true
+    commentId: N:FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+        name: GlobalEventManager
+        nameWithType: GlobalEventManager
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+        name: GlobalEventManager
+        nameWithType: GlobalEventManager
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+    commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+  System.Boolean:
+    name:
+      CSharp:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Boolean
+  Action:
+    name:
+      CSharp:
+      - id: Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+      VB:
+      - id: Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: Action
+        isExternal: true
+    isDefinition: true
+    commentId: '!:Action'
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+        name: GetEventConfig
+        nameWithType: UniversalEventManager.GetEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+        name: GetEventConfig
+        nameWithType: UniversalEventManager.GetEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+  FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig*
+        name: GetEventConfig
+        nameWithType: GlobalEventManager.GetEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig*
+        name: GetEventConfig
+        nameWithType: GlobalEventManager.GetEventConfig
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+  FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+        name: Awake
+        nameWithType: UniversalEventManager.Awake
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+        name: Awake
+        nameWithType: UniversalEventManager.Awake
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+    commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+  FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake*:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake*
+        name: Awake
+        nameWithType: GlobalEventManager.Awake
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake*
+        name: Awake
+        nameWithType: GlobalEventManager.Awake
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+    isDefinition: true
+    commentId: Overload:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+  FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings:
+    name:
+      CSharp:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+        name: GlobalEventSettings
+        nameWithType: GlobalEventSettings
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+      VB:
+      - id: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+        name: GlobalEventSettings
+        nameWithType: GlobalEventSettings
+        qualifiedName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+    isDefinition: true
+    commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings

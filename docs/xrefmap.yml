@@ -1,168 +1,226 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: FinTOKMAK.GlobalEventSystem.Runtime
-  name: FinTOKMAK.GlobalEventSystem.Runtime
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.html
-  commentId: N:FinTOKMAK.GlobalEventSystem.Runtime
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime
-  nameWithType: FinTOKMAK.GlobalEventSystem.Runtime
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers
-  name: FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.html
-  commentId: N:FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers
-  nameWithType: FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.GlobalEventAttribute
-  name: GlobalEventAttribute
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.GlobalEventAttribute.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.GlobalEventAttribute
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.AttributeDrawers.GlobalEventAttribute
-  nameWithType: GlobalEventAttribute
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig
-  name: GlobalEventConfig
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig
-  nameWithType: GlobalEventConfig
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.eventNames
-  name: eventNames
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventConfig_eventNames
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.eventNames
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventConfig.eventNames
-  nameWithType: GlobalEventConfig.eventNames
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData
-  name: GlobalEventData
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData
-  nameWithType: GlobalEventData
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`1
-  name: GlobalEventData<T1>
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-1.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`1
-  name.vb: GlobalEventData(Of T1)
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData<T1>
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData(Of T1)
-  nameWithType: GlobalEventData<T1>
-  nameWithType.vb: GlobalEventData(Of T1)
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`1.data1
+- uid: FinTOKMAK.EventSystem.Runtime
+  name: FinTOKMAK.EventSystem.Runtime
+  href: api/FinTOKMAK.EventSystem.Runtime.html
+  commentId: N:FinTOKMAK.EventSystem.Runtime
+  fullName: FinTOKMAK.EventSystem.Runtime
+  nameWithType: FinTOKMAK.EventSystem.Runtime
+- uid: FinTOKMAK.EventSystem.Runtime.EventData
+  name: EventData
+  href: api/FinTOKMAK.EventSystem.Runtime.EventData.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.EventData
+  fullName: FinTOKMAK.EventSystem.Runtime.EventData
+  nameWithType: EventData
+- uid: FinTOKMAK.EventSystem.Runtime.EventData`1
+  name: EventData<T1>
+  href: api/FinTOKMAK.EventSystem.Runtime.EventData-1.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.EventData`1
+  name.vb: EventData(Of T1)
+  fullName: FinTOKMAK.EventSystem.Runtime.EventData<T1>
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.EventData(Of T1)
+  nameWithType: EventData<T1>
+  nameWithType.vb: EventData(Of T1)
+- uid: FinTOKMAK.EventSystem.Runtime.EventData`1.data1
   name: data1
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-1.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventData_1_data1
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`1.data1
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData<T1>.data1
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData(Of T1).data1
-  nameWithType: GlobalEventData<T1>.data1
-  nameWithType.vb: GlobalEventData(Of T1).data1
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`2
-  name: GlobalEventData<T1, T2>
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-2.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`2
-  name.vb: GlobalEventData(Of T1, T2)
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData<T1, T2>
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData(Of T1, T2)
-  nameWithType: GlobalEventData<T1, T2>
-  nameWithType.vb: GlobalEventData(Of T1, T2)
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`2.data1
+  href: api/FinTOKMAK.EventSystem.Runtime.EventData-1.html#FinTOKMAK_EventSystem_Runtime_EventData_1_data1
+  commentId: F:FinTOKMAK.EventSystem.Runtime.EventData`1.data1
+  fullName: FinTOKMAK.EventSystem.Runtime.EventData<T1>.data1
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.EventData(Of T1).data1
+  nameWithType: EventData<T1>.data1
+  nameWithType.vb: EventData(Of T1).data1
+- uid: FinTOKMAK.EventSystem.Runtime.EventData`2
+  name: EventData<T1, T2>
+  href: api/FinTOKMAK.EventSystem.Runtime.EventData-2.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.EventData`2
+  name.vb: EventData(Of T1, T2)
+  fullName: FinTOKMAK.EventSystem.Runtime.EventData<T1, T2>
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.EventData(Of T1, T2)
+  nameWithType: EventData<T1, T2>
+  nameWithType.vb: EventData(Of T1, T2)
+- uid: FinTOKMAK.EventSystem.Runtime.EventData`2.data1
   name: data1
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-2.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventData_2_data1
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`2.data1
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData<T1, T2>.data1
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData(Of T1, T2).data1
-  nameWithType: GlobalEventData<T1, T2>.data1
-  nameWithType.vb: GlobalEventData(Of T1, T2).data1
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`2.data2
+  href: api/FinTOKMAK.EventSystem.Runtime.EventData-2.html#FinTOKMAK_EventSystem_Runtime_EventData_2_data1
+  commentId: F:FinTOKMAK.EventSystem.Runtime.EventData`2.data1
+  fullName: FinTOKMAK.EventSystem.Runtime.EventData<T1, T2>.data1
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.EventData(Of T1, T2).data1
+  nameWithType: EventData<T1, T2>.data1
+  nameWithType.vb: EventData(Of T1, T2).data1
+- uid: FinTOKMAK.EventSystem.Runtime.EventData`2.data2
   name: data2
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData-2.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventData_2_data2
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData`2.data2
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData<T1, T2>.data2
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventData(Of T1, T2).data2
-  nameWithType: GlobalEventData<T1, T2>.data2
-  nameWithType.vb: GlobalEventData(Of T1, T2).data2
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager
+  href: api/FinTOKMAK.EventSystem.Runtime.EventData-2.html#FinTOKMAK_EventSystem_Runtime_EventData_2_data2
+  commentId: F:FinTOKMAK.EventSystem.Runtime.EventData`2.data2
+  fullName: FinTOKMAK.EventSystem.Runtime.EventData<T1, T2>.data2
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.EventData(Of T1, T2).data2
+  nameWithType: EventData<T1, T2>.data2
+  nameWithType.vb: EventData(Of T1, T2).data2
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  name: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.html
+  commentId: N:FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+  nameWithType: FinTOKMAK.EventSystem.Runtime.GlobalEvent
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+  name: GlobalEventAttribute
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute
+  nameWithType: GlobalEventAttribute
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
   name: GlobalEventManager
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager
   nameWithType: GlobalEventManager
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.finishInitializeEvent
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+  name: Awake()
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_Awake
+  commentId: M:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake()
+  nameWithType: GlobalEventManager.Awake()
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake*
+  name: Awake
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_Awake_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Awake
+  nameWithType: GlobalEventManager.Awake
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
   name: finishInitializeEvent
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_finishInitializeEvent
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.finishInitializeEvent
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.finishInitializeEvent
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_finishInitializeEvent
+  commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.finishInitializeEvent
   nameWithType: GlobalEventManager.finishInitializeEvent
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.initialized
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+  name: GetEventConfig()
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_GetEventConfig
+  commentId: M:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig()
+  nameWithType: GlobalEventManager.GetEventConfig()
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig*
+  name: GetEventConfig
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_GetEventConfig_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.GetEventConfig
+  nameWithType: GlobalEventManager.GetEventConfig
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
   name: initialized
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_initialized
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.initialized
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.initialized
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_initialized
+  commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.initialized
   nameWithType: GlobalEventManager.initialized
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.Instance
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
   name: Instance
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_Instance
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.Instance
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.Instance
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventManager_Instance
+  commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.Instance
   nameWithType: GlobalEventManager.Instance
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.InvokeEvent(System.String,FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData)
-  name: InvokeEvent(String, IGlobalEventData)
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_InvokeEvent_System_String_FinTOKMAK_GlobalEventSystem_Runtime_IGlobalEventData_
-  commentId: M:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.InvokeEvent(System.String,FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData)
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.InvokeEvent(System.String, FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData)
-  nameWithType: GlobalEventManager.InvokeEvent(String, IGlobalEventData)
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.InvokeEvent*
-  name: InvokeEvent
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_InvokeEvent_
-  commentId: Overload:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.InvokeEvent
-  isSpec: "True"
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.InvokeEvent
-  nameWithType: GlobalEventManager.InvokeEvent
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData})
-  name: RegisterEvent(String, Action<IGlobalEventData>)
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_RegisterEvent_System_String_Action_FinTOKMAK_GlobalEventSystem_Runtime_IGlobalEventData__
-  commentId: M:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData})
-  name.vb: RegisterEvent(String, Action(Of IGlobalEventData))
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent(System.String, Action<FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData>)
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent(System.String, Action(Of FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData))
-  nameWithType: GlobalEventManager.RegisterEvent(String, Action<IGlobalEventData>)
-  nameWithType.vb: GlobalEventManager.RegisterEvent(String, Action(Of IGlobalEventData))
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent*
-  name: RegisterEvent
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_RegisterEvent_
-  commentId: Overload:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent
-  isSpec: "True"
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.RegisterEvent
-  nameWithType: GlobalEventManager.RegisterEvent
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData})
-  name: UnRegisterEvent(String, Action<IGlobalEventData>)
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_UnRegisterEvent_System_String_Action_FinTOKMAK_GlobalEventSystem_Runtime_IGlobalEventData__
-  commentId: M:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData})
-  name.vb: UnRegisterEvent(String, Action(Of IGlobalEventData))
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent(System.String, Action<FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData>)
-  fullName.vb: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent(System.String, Action(Of FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData))
-  nameWithType: GlobalEventManager.UnRegisterEvent(String, Action<IGlobalEventData>)
-  nameWithType.vb: GlobalEventManager.UnRegisterEvent(String, Action(Of IGlobalEventData))
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent*
-  name: UnRegisterEvent
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventManager_UnRegisterEvent_
-  commentId: Overload:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent
-  isSpec: "True"
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventManager.UnRegisterEvent
-  nameWithType: GlobalEventManager.UnRegisterEvent
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
   name: GlobalEventSettings
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings
   nameWithType: GlobalEventSettings
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.globalEventConfig
-  name: globalEventConfig
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.html#FinTOKMAK_GlobalEventSystem_Runtime_GlobalEventSettings_globalEventConfig
-  commentId: F:FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.globalEventConfig
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.GlobalEventSettings.globalEventConfig
-  nameWithType: GlobalEventSettings.globalEventConfig
-- uid: FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData
-  name: IGlobalEventData
-  href: api/FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData.html
-  commentId: T:FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData
-  fullName: FinTOKMAK.GlobalEventSystem.Runtime.IGlobalEventData
-  nameWithType: IGlobalEventData
+- uid: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+  name: universalEventConfig
+  href: api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.html#FinTOKMAK_EventSystem_Runtime_GlobalEvent_GlobalEventSettings_universalEventConfig
+  commentId: F:FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+  fullName: FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.universalEventConfig
+  nameWithType: GlobalEventSettings.universalEventConfig
+- uid: FinTOKMAK.EventSystem.Runtime.IEventData
+  name: IEventData
+  href: api/FinTOKMAK.EventSystem.Runtime.IEventData.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.IEventData
+  fullName: FinTOKMAK.EventSystem.Runtime.IEventData
+  nameWithType: IEventData
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+  name: UniversalEventConfig
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig
+  nameWithType: UniversalEventConfig
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+  name: eventNames
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.html#FinTOKMAK_EventSystem_Runtime_UniversalEventConfig_eventNames
+  commentId: F:FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.eventNames
+  nameWithType: UniversalEventConfig.eventNames
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+  name: UniversalEventManager
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html
+  commentId: T:FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager
+  nameWithType: UniversalEventManager
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+  name: Awake()
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_Awake
+  commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake()
+  nameWithType: UniversalEventManager.Awake()
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake*
+  name: Awake
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_Awake_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.Awake
+  nameWithType: UniversalEventManager.Awake
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+  name: GetEventConfig()
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_GetEventConfig
+  commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig()
+  nameWithType: UniversalEventManager.GetEventConfig()
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig*
+  name: GetEventConfig
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_GetEventConfig_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.GetEventConfig
+  nameWithType: UniversalEventManager.GetEventConfig
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+  name: InvokeEvent(String, IEventData)
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_InvokeEvent_System_String_FinTOKMAK_EventSystem_Runtime_IEventData_
+  commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String,FinTOKMAK.EventSystem.Runtime.IEventData)
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent(System.String, FinTOKMAK.EventSystem.Runtime.IEventData)
+  nameWithType: UniversalEventManager.InvokeEvent(String, IEventData)
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent*
+  name: InvokeEvent
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_InvokeEvent_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.InvokeEvent
+  nameWithType: UniversalEventManager.InvokeEvent
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  name: RegisterEvent(String, Action<IEventData>)
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_RegisterEvent_System_String_Action_FinTOKMAK_EventSystem_Runtime_IEventData__
+  commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  name.vb: RegisterEvent(String, Action(Of IEventData))
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String, Action<FinTOKMAK.EventSystem.Runtime.IEventData>)
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent(System.String, Action(Of FinTOKMAK.EventSystem.Runtime.IEventData))
+  nameWithType: UniversalEventManager.RegisterEvent(String, Action<IEventData>)
+  nameWithType.vb: UniversalEventManager.RegisterEvent(String, Action(Of IEventData))
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent*
+  name: RegisterEvent
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_RegisterEvent_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.RegisterEvent
+  nameWithType: UniversalEventManager.RegisterEvent
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  name: UnRegisterEvent(String, Action<IEventData>)
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_UnRegisterEvent_System_String_Action_FinTOKMAK_EventSystem_Runtime_IEventData__
+  commentId: M:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String,Action{FinTOKMAK.EventSystem.Runtime.IEventData})
+  name.vb: UnRegisterEvent(String, Action(Of IEventData))
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String, Action<FinTOKMAK.EventSystem.Runtime.IEventData>)
+  fullName.vb: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent(System.String, Action(Of FinTOKMAK.EventSystem.Runtime.IEventData))
+  nameWithType: UniversalEventManager.UnRegisterEvent(String, Action<IEventData>)
+  nameWithType.vb: UniversalEventManager.UnRegisterEvent(String, Action(Of IEventData))
+- uid: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent*
+  name: UnRegisterEvent
+  href: api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html#FinTOKMAK_EventSystem_Runtime_UniversalEventManager_UnRegisterEvent_
+  commentId: Overload:FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+  isSpec: "True"
+  fullName: FinTOKMAK.EventSystem.Runtime.UniversalEventManager.UnRegisterEvent
+  nameWithType: UniversalEventManager.UnRegisterEvent
