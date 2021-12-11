@@ -1,0 +1,320 @@
+{
+  "homepages": [],
+  "source_base_path": "/builds/fintokmak/tokmak-universal-event-release/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.GlobalEvent.GlobalEventDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.GlobalEvent.GlobalEventDrawer.html",
+          "hash": "H6W/J/LeX6adXGr2N2duvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.GlobalEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.GlobalEvent.html",
+          "hash": "6QN6flQJMoFo9WH9lcmCGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.IPathElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.IPathElement.html",
+          "hash": "QZMkAYNzeOF34RdHxAk7cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.PathDirectory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.PathDirectory.html",
+          "hash": "fOAMf8fMYGk6L+rrWsYjNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.PathEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.PathEvent.html",
+          "hash": "Voy8hvuxmcqilwjYNBcF5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.UniversalEventConfigEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.UniversalEventConfigEditor.html",
+          "hash": "+OxrDAoNBbulki97avVfWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.UniversalEventDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.UniversalEventDrawer.html",
+          "hash": "82IdhnykLZies5mcSVC/dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Editor.html",
+          "hash": "Pp6YLEdV1MOttr7xRg+/oA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.EventData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.EventData-1.html",
+          "hash": "vHVxlWxu+fI0AwyL3GD9IQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.EventData-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.EventData-2.html",
+          "hash": "+Avmwg2czWxVtgjzgNhVLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.EventData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.EventData.html",
+          "hash": "yDTRttJsxFAcmbtdW/HFwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventAttribute.html",
+          "hash": "VJO/Xz/G6noF0vxmPchJ+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventManager.html",
+          "hash": "TSjC5R53JH4jd9rflLjlhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.GlobalEventSettings.html",
+          "hash": "il8jVTSROqIXqqZ4uU8CqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.GlobalEvent.html",
+          "hash": "0KqD/8UZBg3N29VVUKtIbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.IEventData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.IEventData.html",
+          "hash": "DALaeT4vHa7I/9i5lHC1LA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.UniversalEventConfig.html",
+          "hash": "rMrBxL5koZ7Y71n2E9xDwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.UniversalEventManager.html",
+          "hash": "2JS4XwTgSP2YghYcvrKzTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.EventSystem.Runtime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.EventSystem.Runtime.html",
+          "hash": "8bs/sdxIRqcJ8l8Rxh8rvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "BA/cPhLtuh7rPY0UGOkAfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "e+U1RrtCy3uHvKhZ7MWfmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "ZzYVJXv0K71rTGiGuG+9Cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 19,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
