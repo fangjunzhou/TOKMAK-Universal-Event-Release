@@ -7,7 +7,7 @@
           "files":["**/**.cs"]
         },
         {
-          "src": "../Tests",
+          "src": "../Editor",
           "files":["**/**.cs"]
         }
       ],
