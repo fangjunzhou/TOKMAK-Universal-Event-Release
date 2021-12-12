@@ -23,7 +23,7 @@ or add in the manifest.json
 
 # Documentation
 
-[Here](https://fangjun-zhou.github.io/TOKMAK-Universal-Event/) is the documentation of TOKMAK Universal Event System.
+[Here](https://fangjun-zhou.github.io/TOKMAK-Universal-Event-Release/) is the documentation of TOKMAK Universal Event System.
 
 # Usage of Global Event (a build-in implementation of universal event)
 
