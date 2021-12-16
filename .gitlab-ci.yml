@@ -41,31 +41,31 @@ doc-job:
         - docs
       expire_in: 10 min
 
-doc-push:
-  stage: deploy
-  image: python:3.6
-  only:
-    - tags
-  before_script:
-    - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
-    - eval `ssh-agent -s`
-    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null # add ssh key
-    - pip3 install -U Commitizen # install commitizen
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub
-    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - apt update
-    - apt upgrade
-    - apt install git-lfs
-  needs: ["doc-job"]
-  script:
-    - git remote set-url origin "${REPO_URL}" # git configuration
-    - git config --global user.email "${CI_EMAIL}" && git config --global user.name "${CI_USERNAME}"
-    - 'exists=`git show-ref refs/heads/doc` && if [ -n "$exists" ]; then git branch -D doc; fi'
-    - git checkout -b doc
-    - ls -la docs
-    - git add -A # execute auto bump and push to master
-    - git commit -m "Generate documentation base on commit ${CI_COMMIT_SHORT_SHA}" || echo "Nothing to commit"
-    - git pull origin doc || echo "No branch doc"
-    - git push origin doc:doc || echo "Nothing to push"
+# doc-push:
+#   stage: deploy
+#   image: python:3.6
+#   only:
+#     - tags
+#   before_script:
+#     - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
+#     - eval `ssh-agent -s`
+#     - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null # add ssh key
+#     - pip3 install -U Commitizen # install commitizen
+#     - mkdir -p ~/.ssh
+#     - chmod 700 ~/.ssh
+#     - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub
+#     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+#     - apt update
+#     - apt upgrade
+#     - apt install git-lfs
+#   needs: ["doc-job"]
+#   script:
+#     - git remote set-url origin "${REPO_URL}" # git configuration
+#     - git config --global user.email "${CI_EMAIL}" && git config --global user.name "${CI_USERNAME}"
+#     - 'exists=`git show-ref refs/heads/doc` && if [ -n "$exists" ]; then git branch -D doc; fi'
+#     - git checkout -b doc
+#     - ls -la docs
+#     - git add -A # execute auto bump and push to master
+#     - git commit -m "Generate documentation base on commit ${CI_COMMIT_SHORT_SHA}" || echo "Nothing to commit"
+#     - git pull origin doc || echo "No branch doc"
+#     - git push origin doc:doc || echo "Nothing to push"
