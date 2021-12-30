@@ -1,6 +1,6 @@
 {
   "name": "com.fintokmak.universaleventsystem",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "displayName": "TOKMAK Universal Event",
   "description": "This is a universal event system developed by FinTOKMAK Studio.",
   "unity": "2020.3",
