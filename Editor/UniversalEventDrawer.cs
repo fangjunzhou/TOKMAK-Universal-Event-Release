@@ -11,11 +11,12 @@ namespace FinTOKMAK.EventSystem.Editor
         private UniversalEventConfig _config;
 
         private string[] _options;
-        private int _index = 0;
 
         public override void OnGUI(Rect position, SerializedProperty property,
             GUIContent label)
         {
+            int index = 0;
+            
             if (property.propertyType != SerializedPropertyType.String)
             {
                 position.height = 35;
@@ -36,20 +37,26 @@ namespace FinTOKMAK.EventSystem.Editor
                     EditorGUILayout.Space(position.height - 18);
                     return;
                 }
-                _options = _config.eventNames.ToArray();
-                if (_config.eventNames.Contains(property.stringValue))
-                {
-                    _index = _config.eventNames.IndexOf(property.stringValue);
-                }
-                else
-                {
-                    _index = 0;
-                    property.stringValue = _options[_index];
-                }
             }
             
-            _index = EditorGUI.Popup(position, label.text, _index, _options);
-            property.stringValue = _options[_index];
+            _options = _config.eventNames.ToArray();
+            if (_config.eventNames.Contains(property.stringValue))
+            {
+                index = _config.eventNames.IndexOf(property.stringValue);
+            }
+            else
+            {
+                index = 0;
+                property.stringValue = _options[index];
+            }
+            
+            EditorGUI.BeginChangeCheck();
+            index = EditorGUI.Popup(position, label.text, index, _options);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Debug.Log("Drop down changed.");
+                property.stringValue = _options[index];
+            }
         }
 
         /// <summary>
