@@ -46,8 +46,34 @@ namespace FinTOKMAK.EventSystem.Editor
             }
             else
             {
-                index = 0;
-                property.stringValue = _options[index];
+                if (property.stringValue != String.Empty)
+                {
+                    EditorGUILayout.HelpBox($"A new event \"{property.stringValue}\" is found, do you want to add it to the event config?", MessageType.Warning);
+
+                    EditorGUILayout.BeginHorizontal();
+                    {
+                        if (GUILayout.Button("Yes"))
+                        {
+                            _config.eventNames.Add(property.stringValue);
+                            EditorUtility.SetDirty(_config);
+                            index = _config.eventNames.IndexOf(property.stringValue);
+                        }
+
+                        if (GUILayout.Button("No"))
+                        {
+                            index = 0;
+                            property.stringValue = _options[index];
+                        }   
+                    }
+                    EditorGUILayout.EndHorizontal();
+                    
+                    return;
+                }
+                else
+                {
+                    index = 0;
+                    property.stringValue = _options[index];
+                }
             }
             
             EditorGUI.BeginChangeCheck();
