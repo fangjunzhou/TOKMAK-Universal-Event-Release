@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.3] - 2021-1-3
+## [0.2.4] - 2022-2-2
+### Changed
+- Ask the developer whether to add the not existing event when certain event does not exist.
+
+## [0.2.3] - 2022-1-3
 ### Changed
 - Fix the issue that UniversalEventDrawer cannot draw event dropdown in serializable list.
 
@@ -49,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Finish implement basic invoke and listen function.
 
 [Unreleased]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event
+[0.2.4]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.4
 [0.2.3]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.3
 [0.2.2]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.2
 [0.2.1]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.1
