@@ -75,13 +75,23 @@ namespace FinTOKMAK.EventSystem.Editor
                     property.stringValue = _options[index];
                 }
             }
-            
+
+            Rect dropDownPos = position;
+            dropDownPos.width -= 100;
             EditorGUI.BeginChangeCheck();
-            index = EditorGUI.Popup(position, label.text, index, _options);
+            index = EditorGUI.Popup(dropDownPos, label.text, index, _options);
             if (EditorGUI.EndChangeCheck())
             {
                 Debug.Log("Drop down changed.");
                 property.stringValue = _options[index];
+            }
+            
+            Rect buttonPos = position;
+            buttonPos.width = 90;
+            buttonPos.x = position.width - 72;
+            if (GUI.Button(buttonPos, "Copy"))
+            {
+                EditorGUIUtility.systemCopyBuffer = _options[index];
             }
         }
 
