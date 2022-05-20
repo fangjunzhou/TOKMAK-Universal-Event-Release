@@ -8,13 +8,28 @@ namespace FinTOKMAK.EventSystem.Editor
 {
     public class UniversalEventDrawer : PropertyDrawer
     {
+        private bool _init = false;
+        
         private UniversalEventConfig _config;
 
         private string[] _options;
 
+        private bool _checkTable = false;
+
+        protected virtual void Init(Rect position, SerializedProperty property,
+            GUIContent label)
+        {
+        }
+
         public override void OnGUI(Rect position, SerializedProperty property,
             GUIContent label)
         {
+            if (!_init)
+            {
+                Init(position, property, label);
+                _init = true;
+            }
+            
             int index = 0;
             
             if (property.propertyType != SerializedPropertyType.String)
@@ -57,12 +72,15 @@ namespace FinTOKMAK.EventSystem.Editor
                             _config.eventNames.Add(property.stringValue);
                             EditorUtility.SetDirty(_config);
                             index = _config.eventNames.IndexOf(property.stringValue);
+                            OnEventContentChange(property, string.Empty, _options[index]);
+                            
                         }
 
                         if (GUILayout.Button("No"))
                         {
                             index = 0;
                             property.stringValue = _options[index];
+                            OnEventContentChange(property, string.Empty, _options[index]);
                         }   
                     }
                     EditorGUILayout.EndHorizontal();
@@ -73,17 +91,30 @@ namespace FinTOKMAK.EventSystem.Editor
                 {
                     index = 0;
                     property.stringValue = _options[index];
+                    OnEventContentChange(property, string.Empty, _options[index]);
                 }
+            }
+
+            if (!_checkTable)
+            {
+                
+                if (!HavePropertyRecord(property))
+                {
+                    OnEventContentChange(property, string.Empty, _options[index]);
+                }
+                _checkTable = true;
             }
 
             Rect dropDownPos = position;
             dropDownPos.width -= 100;
             EditorGUI.BeginChangeCheck();
+            int oldIndex = index;
             index = EditorGUI.Popup(dropDownPos, label.text, index, _options);
             if (EditorGUI.EndChangeCheck())
             {
-                Debug.Log("Drop down changed.");
+                Debug.Log($"Event changed from {_options[oldIndex]} to {_options[index]}.");
                 property.stringValue = _options[index];
+                OnEventContentChange(property, _options[oldIndex], _options[index]);
             }
             
             Rect buttonPos = position;
@@ -102,6 +133,16 @@ namespace FinTOKMAK.EventSystem.Editor
         public virtual UniversalEventConfig GetEventConfig()
         {
             throw new NotImplementedException();
+        }
+
+        public virtual void OnEventContentChange(SerializedProperty property, string oldEvent, string newEvent)
+        {
+            
+        }
+
+        public virtual bool HavePropertyRecord(SerializedProperty property)
+        {
+            return false;
         }
     }
 }
