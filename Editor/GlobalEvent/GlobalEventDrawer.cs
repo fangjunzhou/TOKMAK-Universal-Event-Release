@@ -40,12 +40,15 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
             {
                 // Change look up table.
                 Settings<GlobalEventSettings>.instance.eventLookupTable.Add(info, newEvent);
-                
-                return;
             }
+            else
+            {
+                // Change look up table.
+                Settings<GlobalEventSettings>.instance.eventLookupTable[info] = newEvent;
+            }
+            
+            EditorUtility.SetDirty(Settings<GlobalEventSettings>.instance);
 
-            // Change look up table.
-            Settings<GlobalEventSettings>.instance.eventLookupTable[info] = newEvent;
         }
 
         public override bool HavePropertyRecord(SerializedProperty property)
