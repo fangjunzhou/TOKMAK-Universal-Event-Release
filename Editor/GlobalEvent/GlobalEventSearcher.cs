@@ -18,6 +18,8 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
 
         private List<SerializedFieldInfo> _result = new List<SerializedFieldInfo>();
 
+        private Vector2 _resultSearchScrollView;
+
         #endregion
         
         [MenuItem("FinTOKMAK/Universal Event/Global Event Searcher")]
@@ -38,9 +40,9 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
         {
             EditorGUILayout.BeginHorizontal("box");
             {
-                EditorGUILayout.PropertyField(_searchEvent, GUILayout.ExpandWidth(true));
+                EditorGUILayout.PropertyField(_searchEvent);
                 
-                GUILayout.Space(15);
+                GUILayout.Space(10);
 
                 if (GUILayout.Button("Search", GUILayout.Width(50)))
                 {
@@ -51,7 +53,7 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
 
                     if (_result.Count == 0)
                         EditorUtility.DisplayDialog("Result Not Found",
-                            $"There is no event named {_searchEvent.stringValue} in the database.", "OK");
+                            $"There is no event named \"{_searchEvent.stringValue}\" in the database.", "OK");
                 }
             }
             EditorGUILayout.EndHorizontal();
@@ -59,16 +61,20 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
             EditorGUILayout.BeginVertical("box");
             {
                 EditorGUILayout.LabelField("Search Result", EditorStyles.boldLabel);
-                foreach (SerializedFieldInfo info in _result)
+                _resultSearchScrollView = EditorGUILayout.BeginScrollView(_resultSearchScrollView);
                 {
-                    EditorGUILayout.BeginVertical("box");
+                    foreach (SerializedFieldInfo info in _result)
                     {
-                        EditorGUILayout.TextField("Object: ", info.objPath);
+                        EditorGUILayout.BeginVertical("box");
+                        {
+                            EditorGUILayout.TextField("Object: ", info.objPath);
                         
-                        EditorGUILayout.TextField("Field: ", info.fieldPath);
-                    }
-                    EditorGUILayout.EndVertical();
+                            EditorGUILayout.TextField("Field: ", info.fieldPath);
+                        }
+                        EditorGUILayout.EndVertical();
+                    } 
                 }
+                EditorGUILayout.EndScrollView();
             }
             EditorGUILayout.EndVertical();
         }
