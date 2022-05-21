@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using DG.DemiEditor;
 using FinTOKMAK.EventSystem.Runtime;
 using Hextant;
 using UnityEditor;
@@ -97,7 +99,6 @@ namespace FinTOKMAK.EventSystem.Editor
 
             if (!_checkTable)
             {
-                
                 if (!HavePropertyRecord(property))
                 {
                     OnEventContentChange(property, string.Empty, _options[index]);
@@ -105,24 +106,45 @@ namespace FinTOKMAK.EventSystem.Editor
                 _checkTable = true;
             }
 
-            Rect dropDownPos = position;
-            dropDownPos.width -= 100;
+            position = position.SetWidth(position.width - 110);
+            
             EditorGUI.BeginChangeCheck();
             int oldIndex = index;
-            index = EditorGUI.Popup(dropDownPos, label.text, index, _options);
+            index = EditorGUI.Popup(position, label.text, index, _options);
             if (EditorGUI.EndChangeCheck())
             {
                 Debug.Log($"Event changed from {_options[oldIndex]} to {_options[index]}.");
                 property.stringValue = _options[index];
                 OnEventContentChange(property, _options[oldIndex], _options[index]);
+                
             }
+        
+            position = position.SetX(position.x + position.width + 5);
+            position = position.SetWidth(50);
             
-            Rect buttonPos = position;
-            buttonPos.width = 90;
-            buttonPos.x = position.width - 72;
-            if (GUI.Button(buttonPos, "Copy"))
+            if (GUI.Button(position, "Copy"))
             {
                 EditorGUIUtility.systemCopyBuffer = _options[index];
+            }
+            
+            position = position.SetX(position.x + position.width + 5);
+            position = position.SetWidth(50);
+            
+            if (GUI.Button(position, "Paste"))
+            {
+                string content = EditorGUIUtility.systemCopyBuffer;
+                if (_options.Contains(content))
+                {
+                    oldIndex = index;
+                    index = _options.ToList().IndexOf(content);
+                    property.stringValue = _options[index];
+                    OnEventContentChange(property, _options[oldIndex], _options[index]);
+                }
+                else
+                {
+                    EditorUtility.DisplayDialog("Event Not Found",
+                        $"There is no event named \"{content}\" in the database.", "OK");
+                }
             }
         }
 
