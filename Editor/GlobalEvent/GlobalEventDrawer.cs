@@ -48,7 +48,7 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
             }
             
             EditorUtility.SetDirty(Settings<GlobalEventSettings>.instance);
-
+            AssetDatabase.SaveAssetIfDirty(Settings<GlobalEventSettings>.instance);
         }
 
         public override bool HavePropertyRecord(SerializedProperty property)
