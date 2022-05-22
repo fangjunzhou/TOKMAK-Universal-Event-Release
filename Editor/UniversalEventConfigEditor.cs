@@ -700,6 +700,7 @@ namespace FinTOKMAK.EventSystem.Editor
             UniversalEventConfig config = (UniversalEventConfig) serializedObject.targetObject;
             config.eventNames = _root.GetAllEvents().ToList();
             EditorUtility.SetDirty(config);
+            AssetDatabase.SaveAssetIfDirty(config);
         }
 
         /// <summary>
