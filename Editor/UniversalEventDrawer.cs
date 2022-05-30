@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using DG.DemiEditor;
 using FinTOKMAK.EventSystem.Runtime;
 using Hextant;
 using UnityEditor;
@@ -106,7 +105,7 @@ namespace FinTOKMAK.EventSystem.Editor
                 _checkTable = true;
             }
 
-            position = position.SetWidth(position.width - 110);
+            position.width = position.width - 110;
             
             EditorGUI.BeginChangeCheck();
             int oldIndex = index;
@@ -119,16 +118,16 @@ namespace FinTOKMAK.EventSystem.Editor
                 
             }
         
-            position = position.SetX(position.x + position.width + 5);
-            position = position.SetWidth(50);
+            position.x = position.x + position.width + 5;
+            position.width = 50;
             
             if (GUI.Button(position, "Copy"))
             {
                 EditorGUIUtility.systemCopyBuffer = _options[index];
             }
             
-            position = position.SetX(position.x + position.width + 5);
-            position = position.SetWidth(50);
+            position.x = position.x + position.width + 5;
+            position.width = 50;
             
             if (GUI.Button(position, "Paste"))
             {
