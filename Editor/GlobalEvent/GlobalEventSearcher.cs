@@ -5,18 +5,25 @@ using FinTOKMAK.EventSystem.Runtime.GlobalEvent;
 using Hextant;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
 {
     public class GlobalEventSearcher : EditorWindow
     {
+        private class SearchResult
+        {
+            public SerializedFieldInfo info;
+            public Object obj;
+        }
+        
         #region Private Field
 
         private GlobalEventSearcherData _data;
         
         private SerializedProperty _searchEvent;
 
-        private List<SerializedFieldInfo> _result = new List<SerializedFieldInfo>();
+        private List<SearchResult> _result = new List<SearchResult>();
 
         private Vector2 _resultSearchScrollView;
 
@@ -49,6 +56,11 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
                     _result = Settings<GlobalEventSettings>.instance.eventLookupTable.Keys
                         .Where((info => Settings<GlobalEventSettings>.instance.eventLookupTable[info] ==
                                         _searchEvent.stringValue))
+                        .Select((info => new SearchResult()
+                        {
+                            info = info,
+                            obj = AssetDatabase.LoadAssetAtPath<Object>(info.objPath)
+                        }))
                         .ToList();
 
                     if (_result.Count == 0)
@@ -63,13 +75,15 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
                 EditorGUILayout.LabelField("Search Result", EditorStyles.boldLabel);
                 _resultSearchScrollView = EditorGUILayout.BeginScrollView(_resultSearchScrollView);
                 {
-                    foreach (SerializedFieldInfo info in _result)
+                    foreach (SearchResult result in _result)
                     {
                         EditorGUILayout.BeginVertical("box");
                         {
-                            EditorGUILayout.TextField("Object: ", info.objPath);
+                            EditorGUILayout.ObjectField("Object: ", result.obj, typeof(Object));
+
+                            EditorGUILayout.TextField("Object Path: ", result.info.objPath);
                         
-                            EditorGUILayout.TextField("Field: ", info.fieldPath);
+                            EditorGUILayout.TextField("Field: ", result.info.fieldPath);
                         }
                         EditorGUILayout.EndVertical();
                     } 

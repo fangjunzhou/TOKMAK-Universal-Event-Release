@@ -6,11 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.4] - 2022-2-2
+## [0.2.5] - 2022-05-31
+### Added
+- Added GlobalEventSearcher. Support basic search feature across all global events.
+- Added event copy feature.
+- Added event paste feature.
+- Support locating the object when find the event reference.
+
+### Fixed
+- Set the settings dirty when make change to the events to save event reference record.
+
+## [0.2.4] - 2022-02-02
 ### Changed
 - Ask the developer whether to add the not existing event when certain event does not exist.
 
-## [0.2.3] - 2022-1-3
+## [0.2.3] - 2022-01-03
 ### Changed
 - Fix the issue that UniversalEventDrawer cannot draw event dropdown in serializable list.
 
@@ -53,6 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Finish implement basic invoke and listen function.
 
 [Unreleased]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event
+[0.2.5]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.5
 [0.2.4]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.4
 [0.2.3]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.3
 [0.2.2]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.2
