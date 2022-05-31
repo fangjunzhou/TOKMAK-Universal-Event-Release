@@ -7,6 +7,9 @@
   "unityRelease": "0b5",
   "license": "GPL",
   "dependencies": {
+    "com.dbrizov.naughtyattributes": "2.1.4",
+    "com.fintokmak.serializabledictionary": "0.1.0",
+    "com.hextantstudios.utilities": "0.1.0"
   },
   "keywords": [
   ],
