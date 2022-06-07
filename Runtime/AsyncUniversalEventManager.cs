@@ -1,23 +1,14 @@
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using Hextant;
-using NaughtyAttributes;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace FinTOKMAK.EventSystem.Runtime
 {
-    /// <summary>
-    /// This MonoBehaviour provides event management
-    /// </summary>
-    public class UniversalEventManager : MonoBehaviour
+    public delegate Task AsyncAction(IEventData data);
+    
+    public class AsyncUniversalEventManager : MonoBehaviour
     {
-        #region Public Field
-        
-        
-
-        #endregion
-
         #region Private Field
 
         private UniversalEventConfig _config;
@@ -25,8 +16,8 @@ namespace FinTOKMAK.EventSystem.Runtime
         /// <summary>
         /// The dictionary for the system to call the event
         /// </summary>
-        private Dictionary<string, Action<IEventData>> _eventTable =
-            new Dictionary<string, Action<IEventData>>();
+        private Dictionary<string, AsyncAction> _eventTable =
+            new Dictionary<string, AsyncAction>();
 
         #endregion
 
@@ -47,7 +38,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         {
             foreach (string eventName in _config.eventNames)
             {
-                _eventTable.Add(eventName, data => {});
+                _eventTable.Add(eventName, data => { return Task.CompletedTask; });
             }
         }
 
@@ -69,9 +60,17 @@ namespace FinTOKMAK.EventSystem.Runtime
         /// </summary>
         /// <param name="eventName">the name of the event</param>
         /// <param name="data">the event data to pass in</param>
-        public void InvokeEvent(string eventName, IEventData data)
+        public Task InvokeEvent(string eventName, IEventData data)
         {
-            _eventTable[eventName]?.Invoke(data);
+            List<Task> res = new List<Task>();
+            
+            foreach (var @delegate in _eventTable[eventName].GetInvocationList())
+            {
+                var callback = (AsyncAction) @delegate;
+                res.Add(callback(new EventData()));
+            }
+            
+            return Task.WhenAll(res);
         }
 
         /// <summary>
@@ -79,7 +78,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         /// </summary>
         /// <param name="eventName">the target event name</param>
         /// <param name="registerEvent">the register method or logic</param>
-        public void RegisterEvent(string eventName, Action<IEventData> registerEvent)
+        public void RegisterEvent(string eventName, AsyncAction registerEvent)
         {
             _eventTable[eventName] += registerEvent;
         }
@@ -89,7 +88,7 @@ namespace FinTOKMAK.EventSystem.Runtime
         /// </summary>
         /// <param name="eventName">the target event name</param>
         /// <param name="registerEvent">the register method or logic</param>
-        public void UnRegisterEvent(string eventName, Action<IEventData> registerEvent)
+        public void UnRegisterEvent(string eventName, AsyncAction registerEvent)
         {
             _eventTable[eventName] -= registerEvent;
         }
