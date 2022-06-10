@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.6] - 2022-06-10
+### Added
+- Added AsyncUniversalEventManager for asynchronous events.
+
 ## [0.2.5] - 2022-05-31
 ### Added
 - Added GlobalEventSearcher. Support basic search feature across all global events.
@@ -63,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Finish implement basic invoke and listen function.
 
 [Unreleased]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event
+[0.2.6]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.6
 [0.2.5]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.5
 [0.2.4]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.4
 [0.2.3]: https://github.com/Fangjun-Zhou/TOKMAK-Universal-Event-Release/releases/tag/v0.2.3
