@@ -36,7 +36,7 @@ namespace FinTOKMAK.EventSystem.Editor.GlobalEvent
                 fieldPath = property.propertyPath
             };
             
-            if (oldEvent == String.Empty)
+            if (oldEvent == String.Empty && !Settings<GlobalEventSettings>.instance.eventLookupTable.ContainsKey(info))
             {
                 // Change look up table.
                 Settings<GlobalEventSettings>.instance.eventLookupTable.Add(info, newEvent);
